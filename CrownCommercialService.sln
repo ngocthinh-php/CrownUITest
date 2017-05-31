@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrownUITest", "CrownUITest\CrownUITest.csproj", "{5E9D5B60-CD23-48AA-B94E-52C6E80BED8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8BB6EF87-12F4-468D-B0E6-6A4BCCBA3986}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesForce", "SalesForce\SalesForce.csproj", "{7A5F1EED-4C89-44B2-9950-C745F1F0FBF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E9D5B60-CD23-48AA-B94E-52C6E80BED8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9D5B60-CD23-48AA-B94E-52C6E80BED8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9D5B60-CD23-48AA-B94E-52C6E80BED8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9D5B60-CD23-48AA-B94E-52C6E80BED8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5F1EED-4C89-44B2-9950-C745F1F0FBF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5F1EED-4C89-44B2-9950-C745F1F0FBF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5F1EED-4C89-44B2-9950-C745F1F0FBF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5F1EED-4C89-44B2-9950-C745F1F0FBF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
