@@ -29,7 +29,7 @@ Scenario Outline: CCS Employee Logs in to the portal
     Then User should be logged in successfully
 Examples:
 | email                                    | password  |
-| chitta.jena@crowncommercial.gov.uk.pemqa | Data@2345 |
+| chitta.jena@crowncommercial.gov.uk.pemqa | Data@3456 |
 
 Scenario Outline: CCS Employee fails to log in to the portal
 	Given User has navigated to portal login page

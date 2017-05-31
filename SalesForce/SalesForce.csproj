@@ -82,15 +82,40 @@
     <Compile Include="Pages\SFBasePage.cs" />
     <Compile Include="Pages\SFHomePage.cs" />
     <Compile Include="Pages\SFLoginPage.cs" />
+    <Compile Include="TestFeature\SFCloseACase.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFCloseACase.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestFeature\SFCreateContact.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFCreateContact.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestFeature\SFCreateOrganisation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFCreateOrganisation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestFeature\SFFrameworks.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFFrameworks.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestFeature\SFLogin.feature.cs">
       <DependentUpon>SFLogin.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TestFeature\SFeLogout.feature.cs">
-      <DependentUpon>SFeLogout.feature</DependentUpon>
+    <Compile Include="TestFeature\SFLogout.feature.cs">
+      <DependentUpon>SFLogout.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestFeature\SFCreateACase.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFCreateACase.feature</DependentUpon>
     </Compile>
     <Compile Include="TestSteps\SFLoginOut.cs" />
     <Compile Include="TestSteps\SFLogInSteps.cs" />
@@ -101,18 +126,38 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestFeature\SFCloseACase.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SFCloseACase.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\SFCreateContact.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SFCreateContact.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\SFCreateOrganisation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SFCreateOrganisation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\SFFrameworks.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SFFrameworks.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestFeature\SFLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SFLogin.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\SFeLogout.feature">
+    <None Include="TestFeature\SFLogout.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFeLogout.feature.cs</LastGenOutput>
+      <LastGenOutput>SFLogout.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\SFCreateACase.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SFCreateACase.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\WebDriverIEDriver.2.45.0.0\tools\IEDriverServer-license.txt">
-      <Link>IEDriverServer-license.txt</Link>
+      <Link>TestSteps\IEDriverServer-license.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\packages\WebDriverIEDriver.2.45.0.0\tools\IEDriverServer.exe">

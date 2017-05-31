@@ -58,6 +58,13 @@ namespace SalesForce.Pages
                 return driver.FindElement(_chkBoxRememberMe);
             }
         }
+        public IWebElement LoginButton
+        {
+            get
+            {
+                return driver.FindElement(_btnLogIn);
+            }
+        }
         #endregion
 
         #region Public methods
@@ -94,10 +101,9 @@ namespace SalesForce.Pages
         }
         public void ClickOnLogIn()
         {
-            if (RememberMe.Displayed)
+            if (LoginButton.Displayed)
             {
-                RememberMe.Click();
-                Thread.Sleep(5000);
+                LoginButton.Click();
             }
             else
             {
@@ -119,9 +125,14 @@ namespace SalesForce.Pages
         {
             if (RememberMe.Displayed)
             {
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                IWebElement hiddenLink = driver.FindElement(_chkBoxRememberMe);
+                String script = "arguments[0].click();";
+                js.ExecuteScript(script, hiddenLink);
+
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
                 wait.Until(ExpectedConditions.ElementToBeClickable(_chkBoxRememberMe));
-                RememberMe.Clear();
+                //RememberMe.Clear();
                 RememberMe.Click();
             }
             else

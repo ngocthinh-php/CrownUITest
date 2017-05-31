@@ -113,7 +113,7 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("CCS Employee Logs in to the portal")]
-        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.pemqa", "Data@2345", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.pemqa", "Data@3456", new string[0])]
         public virtual void CCSEmployeeLogsInToThePortal(string email, string password, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CCS Employee Logs in to the portal", exampleTags);

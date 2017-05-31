@@ -12,4 +12,4 @@ Scenario Outline: CCS Employee Logs in to the Salesforce
 	Then I should be logged in successfully
 Examples:
 | email                                    | password  |
-| chitta.jena@crowncommercial.gov.uk.pemqa | Data@2345 |
+| chitta.jena@crowncommercial.gov.uk.pemqa | Data@3456 |

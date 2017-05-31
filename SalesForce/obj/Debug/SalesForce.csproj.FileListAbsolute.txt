@@ -1,4 +1,4 @@
-C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\IEDriverServer-license.txt
+C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\TestSteps\IEDriverServer-license.txt
 C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\IEDriverServer.exe
 C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\SalesForce.dll.config
 C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\SalesForce.dll
@@ -14,5 +14,6 @@ C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\ImpromptuInterface.xml
 C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\nunit.framework.xml
 C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\WebDriver.xml
 C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\WebDriver.Support.xml
+C:\Functional Tests\CCS\CrownUITest\SalesForce\obj\Debug\SalesForce.csprojResolveAssemblyReference.cache
 C:\Functional Tests\CCS\CrownUITest\SalesForce\obj\Debug\SalesForce.dll
 C:\Functional Tests\CCS\CrownUITest\SalesForce\obj\Debug\SalesForce.pdb
