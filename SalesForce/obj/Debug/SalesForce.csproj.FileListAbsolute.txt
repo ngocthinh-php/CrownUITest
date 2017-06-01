@@ -17,3 +17,22 @@ C:\Functional Tests\CCS\CrownUITest\SalesForce\bin\Debug\WebDriver.Support.xml
 C:\Functional Tests\CCS\CrownUITest\SalesForce\obj\Debug\SalesForce.csprojResolveAssemblyReference.cache
 C:\Functional Tests\CCS\CrownUITest\SalesForce\obj\Debug\SalesForce.dll
 C:\Functional Tests\CCS\CrownUITest\SalesForce\obj\Debug\SalesForce.pdb
+C:\CrownUITest\SalesForce\bin\Debug\TestSteps\IEDriverServer-license.txt
+C:\CrownUITest\SalesForce\bin\Debug\IEDriverServer.exe
+C:\CrownUITest\SalesForce\bin\Debug\SalesForce.dll.config
+C:\CrownUITest\SalesForce\bin\Debug\SalesForce.dll
+C:\CrownUITest\SalesForce\bin\Debug\SalesForce.pdb
+C:\CrownUITest\SalesForce\bin\Debug\ImpromptuInterface.dll
+C:\CrownUITest\SalesForce\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\CrownUITest\SalesForce\bin\Debug\nunit.framework.dll
+C:\CrownUITest\SalesForce\bin\Debug\SpecFlow.Assist.Dynamic.dll
+C:\CrownUITest\SalesForce\bin\Debug\TechTalk.SpecFlow.dll
+C:\CrownUITest\SalesForce\bin\Debug\WebDriver.dll
+C:\CrownUITest\SalesForce\bin\Debug\WebDriver.Support.dll
+C:\CrownUITest\SalesForce\bin\Debug\ImpromptuInterface.xml
+C:\CrownUITest\SalesForce\bin\Debug\nunit.framework.xml
+C:\CrownUITest\SalesForce\bin\Debug\WebDriver.xml
+C:\CrownUITest\SalesForce\bin\Debug\WebDriver.Support.xml
+C:\CrownUITest\SalesForce\obj\Debug\SalesForce.csprojResolveAssemblyReference.cache
+C:\CrownUITest\SalesForce\obj\Debug\SalesForce.dll
+C:\CrownUITest\SalesForce\obj\Debug\SalesForce.pdb

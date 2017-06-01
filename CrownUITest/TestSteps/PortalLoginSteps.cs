@@ -32,16 +32,16 @@ namespace CrownUITest.TestSteps
         public void WhenUserClicksOnLoginButton()
         {
             TestBase.login.ClickOnLogIn();
-            TestResultUtilities.AddTestPassToTestResultString("Test Setup", "Pass");
+//            TestResultUtilities.AddTestPassToTestResultString("Test Setup", "Pass");
         }
 
         [Then(@"User should be logged in successfully")]
         public void ThenUserShouldBeLoggedInSuccessfully()
         {
             //TestBase.home.VerifyPage();
-            TestBase.print.TestCaptureScreenshot();
+//            TestBase.print.TestCaptureScreenshot();
             Console.WriteLine("Home Page");
-            TestResultUtilities.AddTestFailToTestResultString("Test Setup", "Fail");
+//            TestResultUtilities.AddTestFailToTestResultString("Test Setup", "Fail");
 
         }
 

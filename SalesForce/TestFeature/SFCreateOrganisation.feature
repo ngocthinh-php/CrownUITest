@@ -1,11 +1,38 @@
-﻿Feature: SFCreateOrganisation
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿Feature: Create a New Account
+	In order to manage customer and supplier data
+	As a CCS entity
+	I want to have a mechanism to input organisation data
 
 @RegressionTest
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario Outline: User Creates a new Customer Organisation
+	Given I am on Organisation Home Page
+	When I click on New button
+	Then I should be directed to Select New Organisation Record Type page
+	When I Select Organisation Record Type as <organisation>
+	And Click on Continue button
+	Then I should be presented with organisation Edit Page
+	When I enter mandatory information <organisationName> and select <sector> and select <status>
+	Then I Should be presented with organisation type drop down
+	When I select a value from <organisationType> drop down field
+	And click on Save button
+	Then a new organisation would be created
+Examples:
+|organisation	|organisationName	|sector				|status|organisationType|
+|Organisation	|Customer001		|Local Government	|Active|County Council	|
+	 
+Scenario Outline: User Creates a new Supplier Organisation
+	Given I am on Organisation Home Page
+	When I click on New button
+	Then I should be directed to Select New Organisation Record Type page
+	When I Select Organisation Record Type as <organisation>
+	And Click on Continue button
+	Then I should be presented with organisation Edit Page
+	When I enter mandatory information <organisationName> and select <sector>
+	Then I Should be presented with organisation type drop down
+	When I select a value from <organisationType> drop down field
+	And click on Save button
+	Then a new organisation would be created
+Examples:
+|organisation	|organisationName	|sector				|organisationType	|
+|Customer		|Supplier001		|Public Sector		|Health				|
+	
