@@ -1,23 +1,3 @@
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\IEDriverServer-license.txt
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\IEDriverServer.exe
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\CrownUITest.dll.config
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\CrownUITest.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\CrownUITest.pdb
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\ExtentReports.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\ImpromptuInterface.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\nunit.framework.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\SpecFlow.Assist.Dynamic.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\TechTalk.SpecFlow.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.Support.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\ImpromptuInterface.xml
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\nunit.framework.xml
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.xml
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.Support.xml
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\obj\Debug\CrownUITest.csprojResolveAssemblyReference.cache
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\obj\Debug\CrownUITest.dll
-C:\Functional Tests\CCS\CrownUITest\CrownUITest\obj\Debug\CrownUITest.pdb
 C:\CrownUITest\CrownUITest\bin\Debug\IEDriverServer-license.txt
 C:\CrownUITest\CrownUITest\bin\Debug\IEDriverServer.exe
 C:\CrownUITest\CrownUITest\bin\Debug\CrownUITest.dll.config
@@ -38,3 +18,43 @@ C:\CrownUITest\CrownUITest\bin\Debug\WebDriver.Support.xml
 C:\CrownUITest\CrownUITest\obj\Debug\CrownUITest.csprojResolveAssemblyReference.cache
 C:\CrownUITest\CrownUITest\obj\Debug\CrownUITest.dll
 C:\CrownUITest\CrownUITest\obj\Debug\CrownUITest.pdb
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\IEDriverServer-license.txt
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\IEDriverServer.exe
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\CrownUITest.dll.config
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\CrownUITest.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\CrownUITest.pdb
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\ExtentReports.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\ImpromptuInterface.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\nunit.framework.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\SpecFlow.Assist.Dynamic.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\TechTalk.SpecFlow.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\WebDriver.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\WebDriver.Support.dll
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\ImpromptuInterface.xml
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\nunit.framework.xml
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\WebDriver.xml
+C:\GitBash\CrownUITest\CrownUITest\bin\Debug\WebDriver.Support.xml
+C:\GitBash\CrownUITest\CrownUITest\obj\Debug\CrownUITest.csprojResolveAssemblyReference.cache
+C:\GitBash\CrownUITest\CrownUITest\obj\Debug\CrownUITest.dll
+C:\GitBash\CrownUITest\CrownUITest\obj\Debug\CrownUITest.pdb
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\IEDriverServer-license.txt
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\IEDriverServer.exe
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\CrownUITest.dll.config
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\CrownUITest.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\CrownUITest.pdb
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\ExtentReports.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\ImpromptuInterface.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\nunit.framework.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\SpecFlow.Assist.Dynamic.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\TechTalk.SpecFlow.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.Support.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\ImpromptuInterface.xml
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\nunit.framework.xml
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.xml
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\bin\Debug\WebDriver.Support.xml
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\obj\Debug\CrownUITest.csprojResolveAssemblyReference.cache
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\obj\Debug\CrownUITest.dll
+C:\Functional Tests\CCS\CrownUITest\CrownUITest\obj\Debug\CrownUITest.pdb

@@ -78,82 +78,117 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Hooks\SFTestBase.cs" />
-    <Compile Include="Pages\SFBasePage.cs" />
-    <Compile Include="Pages\SFHomePage.cs" />
-    <Compile Include="Pages\SFLoginPage.cs" />
-    <Compile Include="TestFeature\SFCloseACase.feature.cs">
+    <Compile Include="Hooks\TestBase.cs" />
+    <Compile Include="Pages\AllTabsPage.cs" />
+    <Compile Include="Pages\ArticleManagementPage.cs" />
+    <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\CasesPage.cs" />
+    <Compile Include="Pages\ChatterPage.cs" />
+    <Compile Include="Pages\ContactsPage.cs" />
+    <Compile Include="Pages\ContractsPage.cs" />
+    <Compile Include="Pages\FrameworksPage.cs" />
+    <Compile Include="Pages\OrganisationRecordPage.cs" />
+    <Compile Include="Pages\KnowledgePage.cs" />
+    <Compile Include="Pages\LandingPage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\OrganisationNewPage.cs" />
+    <Compile Include="Pages\OrganisationEditPage.cs" />
+    <Compile Include="Pages\OrganisationsPage.cs" />
+    <Compile Include="Pages\ProfileHomePage.cs" />
+    <Compile Include="Pages\ReportsPage.cs" />
+    <Compile Include="Pages\TriageLevelsPage.cs" />
+    <Compile Include="TestFeature\CloseACase.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SFCloseACase.feature</DependentUpon>
+      <DependentUpon>CloseACase.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\SFCreateContact.feature.cs">
+    <Compile Include="TestFeature\CreateContact.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SFCreateContact.feature</DependentUpon>
+      <DependentUpon>CreateContact.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\SFCreateOrganisation.feature.cs">
+    <Compile Include="TestFeature\CreateOrganisation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SFCreateOrganisation.feature</DependentUpon>
+      <DependentUpon>CreateOrganisation.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\SFFrameworks.feature.cs">
+    <Compile Include="TestFeature\DeleteTestDataCreated.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SFFrameworks.feature</DependentUpon>
+      <DependentUpon>DeleteTestDataCreated.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\SFLogin.feature.cs">
-      <DependentUpon>SFLogin.feature</DependentUpon>
+    <Compile Include="TestFeature\Frameworks.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Frameworks.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestFeature\Login.feature.cs">
+      <DependentUpon>Login.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TestFeature\SFLogout.feature.cs">
-      <DependentUpon>SFLogout.feature</DependentUpon>
+    <Compile Include="TestFeature\Logout.feature.cs">
+      <DependentUpon>Logout.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TestFeature\SFCreateACase.feature.cs">
+    <Compile Include="TestFeature\CreateACase.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SFCreateACase.feature</DependentUpon>
+      <DependentUpon>CreateACase.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestSteps\SFCreateOrganisationSteps.cs" />
-    <Compile Include="TestSteps\SFLoginOut.cs" />
-    <Compile Include="TestSteps\SFLogInSteps.cs" />
-    <Compile Include="TestSteps\SFLogoutSteps.cs" />
+    <Compile Include="TestFeature\UserNavigation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserNavigation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestSteps\CreateACaseSteps.cs" />
+    <Compile Include="TestSteps\CreateOrganisationSteps.cs" />
+    <Compile Include="TestSteps\DeleteTestDataCreatedSteps.cs" />
+    <Compile Include="TestSteps\LogInSteps.cs" />
+    <Compile Include="TestSteps\LogoutSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestSteps\UserNavigationSteps.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="TestFeature\SFCloseACase.feature">
+    <None Include="TestFeature\CloseACase.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFCloseACase.feature.cs</LastGenOutput>
+      <LastGenOutput>CloseACase.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\SFCreateContact.feature">
+    <None Include="TestFeature\CreateContact.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFCreateContact.feature.cs</LastGenOutput>
+      <LastGenOutput>CreateContact.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\SFCreateOrganisation.feature">
+    <None Include="TestFeature\CreateOrganisation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFCreateOrganisation.feature.cs</LastGenOutput>
+      <LastGenOutput>CreateOrganisation.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\SFFrameworks.feature">
+    <None Include="TestFeature\DeleteTestDataCreated.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFFrameworks.feature.cs</LastGenOutput>
+      <LastGenOutput>DeleteTestDataCreated.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\SFLogin.feature">
+    <None Include="TestFeature\Frameworks.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFLogin.feature.cs</LastGenOutput>
+      <LastGenOutput>Frameworks.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\SFLogout.feature">
+    <None Include="TestFeature\Login.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFLogout.feature.cs</LastGenOutput>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\SFCreateACase.feature">
+    <None Include="TestFeature\Logout.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SFCreateACase.feature.cs</LastGenOutput>
+      <LastGenOutput>Logout.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\CreateACase.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateACase.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\UserNavigation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UserNavigation.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
