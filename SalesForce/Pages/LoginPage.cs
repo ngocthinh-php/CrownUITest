@@ -1,21 +1,28 @@
-﻿using SalesForce.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
-using NUnit.Framework;
-using OpenQA.Selenium.Support.UI;
-using System.Threading;
+﻿using System.Threading;
 
 namespace SalesForce.Pages
 {
+    #region Using Directives
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Support.UI;
+    using NUnit.Framework;
+    using SalesForce.Pages;
+    using TechTalk.SpecFlow;
+    #endregion
+
     public class LoginPage : BasePage
     {
+        #region Constructor
         public LoginPage(IWebDriver Driver) : base(Driver){ }
+        #endregion
 
-        #region Properties and fields
+        #region Identify fields 
         private By _labelUsername = By.XPath("//*[@id='usernamegroup']/label");
         private By _labelPassword = By.XPath("//*[@id='login_form']/label");
         private By _labelRememberMe = By.XPath("//*[@id='login_form']/div[3]/label");
@@ -27,8 +34,9 @@ namespace SalesForce.Pages
         //private By _chkBoxRememberMe = By.XPath("//*[@id='rememberUn']");
         private By _chkBoxRememberMe = By.Id("rememberUn");
         private By _lnkForgotPassword = By.XPath("//*[@id='forgot_password_link']");
+        #endregion
 
-            
+        #region Properties
         public IWebElement UserEmail
         {
             get
