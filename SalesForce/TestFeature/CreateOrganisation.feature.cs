@@ -18,8 +18,9 @@ namespace SalesForce.TestFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("03 - Create a New Account")]
-    public partial class _03_CreateANewAccountFeature
+    [NUnit.Framework.DescriptionAttribute("03 Create Organisation")]
+    [NUnit.Framework.CategoryAttribute("Organisation")]
+    public partial class _03CreateOrganisationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,8 +32,9 @@ namespace SalesForce.TestFeature
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "03 - Create a New Account", "\tIn order to manage customer and supplier data\r\n\tAs a CCS entity\r\n\tI want to have" +
-                    " a mechanism to input organisation data", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "03 Create Organisation", "\tIn order to manage customer and supplier data\r\n\tAs a CCS entity\r\n\tI want to have" +
+                    " a mechanism to input organisation data", ProgrammingLanguage.CSharp, new string[] {
+                        "Organisation"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,75 +66,77 @@ namespace SalesForce.TestFeature
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("01 User Navigates to Create Organisation Page")]
-        [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        public virtual void _01UserNavigatesToCreateOrganisationPage()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 User Navigates to Create Organisation Page", new string[] {
-                        "RegressionTest"});
+#line 7
 #line 8
-this.ScenarioSetup(scenarioInfo);
-#line 9
- testRunner.Given("I am on Organisation Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
- testRunner.When("I click on New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
- testRunner.Then("I should be directed to Select New Organisation Record Type page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Given("I am on Select New Organisation Record Type page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("02 User Creates a new Supplier Organisation")]
-        [NUnit.Framework.TestCaseAttribute("Supplier", "Supplier001", "Public Sector", "Health", new string[0])]
-        public virtual void _02UserCreatesANewSupplierOrganisation(string organisation, string organisationName, string sector, string organisationType, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("01 User Creates a new Supplier Organisation")]
+        [NUnit.Framework.CategoryAttribute("RegressionTest")]
+        [NUnit.Framework.TestCaseAttribute("Supplier", "456789012", "Supplier001", "Public Sector", "Health", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Supplier", "345678901", "Supplier002", "Local Government", "County Council", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Supplier", "234567890", "Supplier003", "Police", "Police Authorit", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Supplier", "123456789", "Supplier004", "Private", "Private Sector Enabler", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Supplier", "012345678", "Supplier005", "Utility", "Energy", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Supplier", "567890123", "Supplier006", "Health", "GP Practice", new string[0])]
+        public virtual void _01UserCreatesANewSupplierOrganisation(string organisation, string dunsNumber, string organisationName, string sector, string organisationType, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 User Creates a new Supplier Organisation", exampleTags);
-#line 12
+            string[] @__tags = new string[] {
+                    "RegressionTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 User Creates a new Supplier Organisation", @__tags);
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 13
+#line 7
+this.FeatureBackground();
+#line 12
  testRunner.When(string.Format("I Select Organisation Record Type as {0}", organisation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
+#line 13
  testRunner.And("Click on Continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
+#line 14
  testRunner.Then("I should be presented with organisation Edit Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 16
+#line 15
  testRunner.When(string.Format("I enter mandatory information for supplier {0}, {1}, {2}", organisationName, sector, organisationType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
+#line 16
  testRunner.And("click on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
+#line 17
  testRunner.Then(string.Format("a new organisation {0} would be created", organisationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("03 User creates Customer organisation")]
-        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        [NUnit.Framework.TestCaseAttribute("Organisation", "Customer001", "Local Government", "County Council", "Active", new string[0])]
-        public virtual void _03UserCreatesCustomerOrganisation(string organisation, string organisationName, string sector, string organisationType, string status, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("02 User creates Customer organisation")]
+        [NUnit.Framework.TestCaseAttribute("Organisation", "Customer001", "Central Government", "Health", "Active", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Organisation", "Customer002", "Education", "Colleges of Higher Education", "Active", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Organisation", "Customer003", "Local Government", "County Council", "Active", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Organisation", "Customer004", "Police", "Police Authority", "Active", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Organisation", "Customer005", "Private", "Private Sector Enabler", "Active", new string[0])]
+        public virtual void _02UserCreatesCustomerOrganisation(string organisation, string organisationName, string sector, string organisationType, string status, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "ignore"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 User creates Customer organisation", @__tags);
-#line 23
-this.ScenarioSetup(scenarioInfo);
-#line 24
- testRunner.When(string.Format("I Select Organisation Record Type as {0}", organisation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
- testRunner.And("Click on Continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 User creates Customer organisation", exampleTags);
 #line 26
- testRunner.Then("I should be presented with organisation Edit Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
 #line 27
- testRunner.When(string.Format("I enter mandatory information for customer {0}, {1}, {2}, {3}", organisationName, sector, organisationType, status), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I Select Organisation Record Type as {0}", organisation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 28
- testRunner.And("click on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click on Continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
+ testRunner.Then("I should be presented with organisation Edit Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
+ testRunner.When(string.Format("I enter mandatory information for customer {0}, {1}, {2}, {3}", organisationName, sector, organisationType, status), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+ testRunner.And("click on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
  testRunner.Then(string.Format("a new organisation {0} would be created", organisationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

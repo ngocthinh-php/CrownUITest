@@ -31,8 +31,8 @@ namespace SalesForce.TestFeature
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "04 - Create a Contact", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "04 - Create a Contact", "\tAs a CCS staff I would \r\n\tI would like to create contact details\r\n\tSo that the c" +
+                    "ontact details can be associated for various operations", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,23 +64,68 @@ namespace SalesForce.TestFeature
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add two numbers")]
-        [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        public virtual void AddTwoNumbers()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", new string[] {
-                        "RegressionTest"});
+#line 6
 #line 7
-this.ScenarioSetup(scenarioInfo);
+    testRunner.Given("I am on Contact Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("I click on New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I should be directed to Contact Edit Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Create a contact with all fields populated")]
+        [NUnit.Framework.CategoryAttribute("RegressionTest")]
+        [NUnit.Framework.TestCaseAttribute("Mr.", "Test012", "Contact", "Help Desk Agent", "CSC", "N", "General Contact", "", "0001", "Active", "01225895988", "0102", "07941373315", "Test012Contact@mailinator.com", "Test010Contact@mailinator.com", "N", "Customer005", "England", "9 Queen Street", "Bristol", "Avon", "BS158BA", "", "A Test", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Mr.", "Test013", "Contact", "Help Desk Agent", "CSC", "N", "General Contact", "", "0001", "Active", "01225895988", "0101", "07941373315", "", "Test010Contact@mailinator.com", "Y", "Customer005", "England", "7 Queen Street", "Bristol", "Avon", "BS158BA", "", "A Test", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Mr.", "Test014", "Contact", "", "", "N", "", "", "", "Active", "01225895988", "0105", "", "", "", "N", "Customer005", "", "", "", "", "", "", "", new string[0])]
+        public virtual void CreateAContactWithAllFieldsPopulated(
+                    string salutation, 
+                    string firstName, 
+                    string lastName, 
+                    string jobTitle, 
+                    string department, 
+                    string ccsEmailYN, 
+                    string contactType, 
+                    string reportsTo, 
+                    string mktgCampaignRef, 
+                    string status, 
+                    string telephone, 
+                    string extension, 
+                    string mobile, 
+                    string email, 
+                    string addnlemail, 
+                    string usrResearchPartYN, 
+                    string orgName, 
+                    string country, 
+                    string addressLine, 
+                    string townCity, 
+                    string county, 
+                    string postcode, 
+                    string origin, 
+                    string notes, 
+                    string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "RegressionTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a contact with all fields populated", @__tags);
 #line 11
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 12
+ testRunner.When("I enter new contact details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.And("click on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.Then("contact record should be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

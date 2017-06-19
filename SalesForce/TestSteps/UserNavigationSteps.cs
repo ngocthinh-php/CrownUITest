@@ -12,14 +12,15 @@ namespace SalesForce.TestSteps
     [Binding]
     public sealed class UserNavigationSteps
     {
+        [Given(@"I am on Salesforce Landing Page")]
+        public void GivenIAmOnSalesforceLandingPage()
+        {
+            TestBase.landing.VerifyPage();
+        }
 
         [When(@"I click on the home tab")]
         public void WhenIClickOnTheHomeTab()
         {
-            TestBase.login.UserLogin("chitta.jena@crowncommercial.gov.uk.pemqa", "Data@3456");
-            Thread.Sleep(5000);
-            TestBase.login.ClickOnLogIn();
-            Thread.Sleep(5000);
             TestBase.landing.ClickOnHomeTab();
             Thread.Sleep(3000);
         }
@@ -152,7 +153,7 @@ namespace SalesForce.TestSteps
         public void WhenIClickOnTheTriageLevelsTab()
         {
             TestBase.landing.ClickOnTriageLevelsTab();
-            Thread.Sleep(3000);
+            Thread.Sleep(5000);
         }
 
         [Then(@"I should see the Triage Levels page")]
@@ -250,6 +251,70 @@ namespace SalesForce.TestSteps
             TestBase.alltabs.ClickOnTriageLevelLink();
             Thread.Sleep(3000);
         }
+        [When(@"I click on the Helpdesk agent profile")]
+        public void WhenIClickOnTheHelpdeskAgentProfile()
+        {
+            TestBase.landing.ClickOnProfileHeader();
+            Thread.Sleep(2000);
+            TestBase.landing.ClickOnSetupMenu();
+            Thread.Sleep(2000);
+
+        }
+
+        [Then(@"I should see Helpdesk Agent Profile page")]
+        public void ThenIShouldSeeHelpdeskAgentProfilePage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I click on the CCS Business Intelligence Profile")]
+        public void WhenIClickOnTheCCSBusinessIntelligenceProfile()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see CCS Business Intelligence Profile page")]
+        public void ThenIShouldSeeCCSBusinessIntelligenceProfilePage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I click on the CCS CRM User profile")]
+        public void WhenIClickOnTheCCSCRMUserProfile()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see CCS CRM User profile page")]
+        public void ThenIShouldSeeCCSCRMUserProfilePage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I click on the CCS Framework Users profile")]
+        public void WhenIClickOnTheCCSFrameworkUsersProfile()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see CCS Framework Users profile page")]
+        public void ThenIShouldSeeCCSFrameworkUsersProfilePage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I click on the CCS Procurement & Contract User profile")]
+        public void WhenIClickOnTheCCSProcurementContractUserProfile()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should see CCS Procurement & Contract User profile page")]
+        public void ThenIShouldSeeCCSProcurementContractUserProfilePage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
 
     }
 }

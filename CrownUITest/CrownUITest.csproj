@@ -95,7 +95,7 @@
     <Compile Include="TestSteps\PortalUserRegistrationSteps.cs" />
     <Compile Include="Utilities\CaptureScreenshot.cs" />
     <Compile Include="Utilities\ExceptionHandling.cs" />
-    <Compile Include="Utilities\HandlyingCookies.cs" />
+    <Compile Include="Utilities\HandlingCookies.cs" />
     <Compile Include="Utilities\LoadCookiesData .cs" />
     <Compile Include="Utilities\PopUP.cs" />
     <Compile Include="Pages\PortalCheckPasswordResetEmailPage.cs" />

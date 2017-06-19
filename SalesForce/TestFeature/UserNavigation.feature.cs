@@ -19,6 +19,7 @@ namespace SalesForce.TestFeature
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("02 - User Navigation")]
+    [NUnit.Framework.CategoryAttribute("Navigation")]
     public partial class _02_UserNavigationFeature
     {
         
@@ -32,7 +33,8 @@ namespace SalesForce.TestFeature
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "02 - User Navigation", "\tIn order to access different parts of the application\r\n\tAs a CCS Employee\r\n\tI sh" +
-                    "ould be given option to navigate", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "ould be given option to navigate", ProgrammingLanguage.CSharp, new string[] {
+                        "Navigation"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,6 +66,14 @@ namespace SalesForce.TestFeature
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 7
+#line 8
+ testRunner.Given("I am on Salesforce Landing Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("01 User Navigates to Profile Home Page (through tab)")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
@@ -71,11 +81,13 @@ namespace SalesForce.TestFeature
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 User Navigates to Profile Home Page (through tab)", new string[] {
                         "RegressionTest"});
-#line 8
+#line 12
 this.ScenarioSetup(scenarioInfo);
-#line 9
+#line 7
+this.FeatureBackground();
+#line 13
  testRunner.When("I click on the home tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
+#line 14
  testRunner.Then("I should see the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -86,11 +98,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _02UserNavigatesToCatterPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 User Navigates to Catter Page (through tab)", ((string[])(null)));
-#line 12
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 13
+#line 7
+this.FeatureBackground();
+#line 17
  testRunner.When("I click on the Chatter tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
+#line 18
  testRunner.Then("I should see the Chatter page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -101,11 +115,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _03UserNavigatesToOrganisationsPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 User Navigates to Organisations Page (through tab)", ((string[])(null)));
-#line 16
+#line 20
 this.ScenarioSetup(scenarioInfo);
-#line 17
+#line 7
+this.FeatureBackground();
+#line 21
  testRunner.When("I click on the Organisations tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+#line 22
  testRunner.Then("I should see the Organisations page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -116,11 +132,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _04UserNavigatesToContactsPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 User Navigates to Contacts Page (through tab)", ((string[])(null)));
-#line 20
+#line 24
 this.ScenarioSetup(scenarioInfo);
-#line 21
+#line 7
+this.FeatureBackground();
+#line 25
  testRunner.When("I click on the Contacts tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 26
  testRunner.Then("I should see the Contacts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -131,11 +149,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _05UserNavigatesToCasesPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 User Navigates to Cases Page (through tab)", ((string[])(null)));
-#line 24
+#line 28
 this.ScenarioSetup(scenarioInfo);
-#line 25
+#line 7
+this.FeatureBackground();
+#line 29
  testRunner.When("I click on the Cases tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 30
  testRunner.Then("I should see the Cases page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -146,11 +166,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _06UserNavigatesToContractsPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 User Navigates to Contracts Page (through tab)", ((string[])(null)));
-#line 28
+#line 32
 this.ScenarioSetup(scenarioInfo);
-#line 29
+#line 7
+this.FeatureBackground();
+#line 33
  testRunner.When("I click on the Contracts tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 34
  testRunner.Then("I should see the Contracts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -161,11 +183,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _07UserNavigatesToFrameworksPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07 User Navigates to Frameworks Page (through tab)", ((string[])(null)));
-#line 32
+#line 36
 this.ScenarioSetup(scenarioInfo);
-#line 33
+#line 7
+this.FeatureBackground();
+#line 37
  testRunner.When("I click on the Frameworks tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 38
  testRunner.Then("I should see the Frameworks page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -176,11 +200,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _08UserNavigatesToReportsPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08 User Navigates to Reports Page (through tab)", ((string[])(null)));
-#line 36
+#line 40
 this.ScenarioSetup(scenarioInfo);
-#line 37
+#line 7
+this.FeatureBackground();
+#line 41
  testRunner.When("I click on the Reports tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 42
  testRunner.Then("I should see the Reports page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -191,11 +217,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _09UserNavigatesToKnowledgePageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 User Navigates to Knowledge Page (through tab)", ((string[])(null)));
-#line 40
+#line 44
 this.ScenarioSetup(scenarioInfo);
-#line 41
+#line 7
+this.FeatureBackground();
+#line 45
  testRunner.When("I click on the Knowledge tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 46
  testRunner.Then("I should see the Knowledge page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -206,11 +234,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _10UserNavigatesToTriageLevelsPageThroughTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 User Navigates to Triage Levels Page (through tab)", ((string[])(null)));
-#line 44
+#line 48
 this.ScenarioSetup(scenarioInfo);
-#line 45
+#line 7
+this.FeatureBackground();
+#line 49
  testRunner.When("I click on the Triage Levels tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
+#line 50
  testRunner.Then("I should see the Triage Levels page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -221,11 +251,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _11UserOpensAllTabsOption()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11 User opens All tabs option", ((string[])(null)));
-#line 48
+#line 52
 this.ScenarioSetup(scenarioInfo);
-#line 49
+#line 7
+this.FeatureBackground();
+#line 53
  testRunner.When("I click on the All tabs tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
+#line 54
  testRunner.Then("I should see the All tabs page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -236,11 +268,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _12UserNavigatesToProfileHomePageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12 User Navigates to Profile Home Page (through navigation link)", ((string[])(null)));
-#line 52
+#line 56
 this.ScenarioSetup(scenarioInfo);
-#line 53
+#line 7
+this.FeatureBackground();
+#line 57
  testRunner.When("I click on the home link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 58
  testRunner.Then("I should see the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -251,11 +285,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _13UserNavigatesToCatterPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("13 User Navigates to Catter Page (through navigation link)", ((string[])(null)));
-#line 56
+#line 60
 this.ScenarioSetup(scenarioInfo);
-#line 57
+#line 7
+this.FeatureBackground();
+#line 61
  testRunner.When("I click on the Chatter link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 58
+#line 62
  testRunner.Then("I should see the Chatter page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -266,11 +302,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _14UserNavigatesToOrganisationsPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("14 User Navigates to Organisations Page (through navigation link)", ((string[])(null)));
-#line 60
+#line 64
 this.ScenarioSetup(scenarioInfo);
-#line 61
+#line 7
+this.FeatureBackground();
+#line 65
  testRunner.When("I click on the Organisations link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 66
  testRunner.Then("I should see the Organisations page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -281,11 +319,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _15UserNavigatesToContactsPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("15 User Navigates to Contacts Page (through navigation link)", ((string[])(null)));
-#line 64
+#line 68
 this.ScenarioSetup(scenarioInfo);
-#line 65
+#line 7
+this.FeatureBackground();
+#line 69
  testRunner.When("I click on the Contacts link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
+#line 70
  testRunner.Then("I should see the Contacts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -296,11 +336,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _16UserNavigatesToCasesPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("16 User Navigates to Cases Page (through navigation link)", ((string[])(null)));
-#line 68
+#line 72
 this.ScenarioSetup(scenarioInfo);
-#line 69
+#line 7
+this.FeatureBackground();
+#line 73
  testRunner.When("I click on the Cases link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
+#line 74
  testRunner.Then("I should see the Cases page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -311,11 +353,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _17UserNavigatesToContractsPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("17 User Navigates to Contracts Page (through navigation link)", ((string[])(null)));
-#line 72
+#line 76
 this.ScenarioSetup(scenarioInfo);
-#line 73
+#line 7
+this.FeatureBackground();
+#line 77
  testRunner.When("I click on the Contracts link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
+#line 78
  testRunner.Then("I should see the Contracts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -326,11 +370,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _18UserNavigatesToFrameworksPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("18 User Navigates to Frameworks Page (through navigation link)", ((string[])(null)));
-#line 76
+#line 80
 this.ScenarioSetup(scenarioInfo);
-#line 77
+#line 7
+this.FeatureBackground();
+#line 81
  testRunner.When("I click on the Frameworks link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 78
+#line 82
  testRunner.Then("I should see the Frameworks page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -341,11 +387,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _19UserNavigatesToReportsPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("19 User Navigates to Reports Page (through navigation link)", ((string[])(null)));
-#line 80
+#line 84
 this.ScenarioSetup(scenarioInfo);
-#line 81
+#line 7
+this.FeatureBackground();
+#line 85
  testRunner.When("I click on the Reports link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
+#line 86
  testRunner.Then("I should see the Reports page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -356,11 +404,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _20UserNavigatesToKnowledgePageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("20 User Navigates to Knowledge Page (through navigation link)", ((string[])(null)));
-#line 84
+#line 88
 this.ScenarioSetup(scenarioInfo);
-#line 85
+#line 7
+this.FeatureBackground();
+#line 89
  testRunner.When("I click on the Knowledge link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
+#line 90
  testRunner.Then("I should see the Knowledge page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -371,12 +421,99 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void _21UserNavigatesToTriageLevelsPageThroughNavigationLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("21 User Navigates to Triage Levels Page (through navigation link)", ((string[])(null)));
-#line 88
+#line 92
 this.ScenarioSetup(scenarioInfo);
-#line 89
+#line 7
+this.FeatureBackground();
+#line 93
  testRunner.When("I click on the Triage Levels link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 94
  testRunner.Then("I should see the Triage Levels page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("22 User navigates to Helpdesk Agent Profile page")]
+        public virtual void _22UserNavigatesToHelpdeskAgentProfilePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("22 User navigates to Helpdesk Agent Profile page", ((string[])(null)));
+#line 96
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 97
+ testRunner.When("I click on the Helpdesk agent profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 98
+ testRunner.Then("I should see Helpdesk Agent Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("23 User navigates to CCS Business Intelligence Profile page")]
+        public virtual void _23UserNavigatesToCCSBusinessIntelligenceProfilePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("23 User navigates to CCS Business Intelligence Profile page", ((string[])(null)));
+#line 100
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 101
+ testRunner.When("I click on the CCS Business Intelligence Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 102
+ testRunner.Then("I should see CCS Business Intelligence Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("24 User navigates to CCS CRM User profile page")]
+        public virtual void _24UserNavigatesToCCSCRMUserProfilePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("24 User navigates to CCS CRM User profile page", ((string[])(null)));
+#line 104
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 105
+ testRunner.When("I click on the CCS CRM User profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 106
+ testRunner.Then("I should see CCS CRM User profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("25 User navigates to CCS Framework Users profile page")]
+        public virtual void _25UserNavigatesToCCSFrameworkUsersProfilePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("25 User navigates to CCS Framework Users profile page", ((string[])(null)));
+#line 108
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 109
+ testRunner.When("I click on the CCS Framework Users profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 110
+ testRunner.Then("I should see CCS Framework Users profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("26 User navigates to CCS Procurement & Contract User profile page")]
+        public virtual void _26UserNavigatesToCCSProcurementContractUserProfilePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("26 User navigates to CCS Procurement & Contract User profile page", ((string[])(null)));
+#line 112
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 113
+ testRunner.When("I click on the CCS Procurement & Contract User profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 114
+ testRunner.Then("I should see CCS Procurement & Contract User profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

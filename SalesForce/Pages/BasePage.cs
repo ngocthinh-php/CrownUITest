@@ -39,14 +39,13 @@ namespace SalesForce.Pages
         //      }
         //      catch (Exception)
         //      {
-                  
+
         //          throw;
         //      }
         //    }
-        //   }
+        // }
 
         //protected abstract bool CurrentPage();
-
         /// <summary>
         /// Exception Handling
         /// </summary>
@@ -55,7 +54,6 @@ namespace SalesForce.Pages
         {
             throw new NotFoundException();
         }
-
         /// <summary>
         /// Find Element & wait
         /// </summary>
@@ -121,6 +119,19 @@ namespace SalesForce.Pages
                 throw new NoSuchElementException();
             }
         }
+        //public IWebElement GetDataFromTable(string findText)
+        //{
+        //    try
+        //    {
+
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw new NoSuchElementException();
+        //    }
+        //}
+
 
         ///// <summary>
         ///// Capture Screenshot & save
@@ -132,6 +143,6 @@ namespace SalesForce.Pages
         //    Screenshot screenshot = screenshotHandler.GetScreenshot();
         //    screenshot.SaveAsFile(filename+"png", ScreenshotImageFormat.Png);
         //}
-
     }
 }
+

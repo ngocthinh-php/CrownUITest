@@ -22,7 +22,8 @@ namespace SalesForce.Pages
         private By _tabFrameworks = By.XPath("//*[@id='01rb0000000E9fq_Tab']/a");
         private By _tabReports = By.XPath("//*[@id='report_Tab']/a");
         private By _tabKnowledge = By.XPath("//*[@id='Knowledge_Tab']/a");
-        private By _tabTriageLevels = By.XPath("//*[@id='01r4E000000DAJP_Tab']/a");
+        //private By _tabTriageLevels = By.XPath("//*[@id='01r4E000000DAJP_Tab']/a");
+        private By _tabTriageLevels = By.XPath("//*[@id='01rb00000001XNE_Tab']/a");
         private By _tabMoreTabs = By.Id("MoreTabs_Tab");
         private By _lnkHideFeed = By.XPath("//*[@id='hideFeedLink']/a/span");
         private By _lnkShowFeed = By.XPath("//*[@id='showFeedLink']/a/span");
@@ -42,6 +43,7 @@ namespace SalesForce.Pages
         private By _lnkEditContactInfo = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[3]/a");
         private By _lnkDeveloperConsole = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[4]/a");
         private By _lnkHelpAndTraining = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[5]/a");
+
         //private By _lnkLogOut = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[6]/a");
         private By _lnkLogOut = By.LinkText("Logout");
 
@@ -409,6 +411,63 @@ namespace SalesForce.Pages
             {
                 LogOut.Click();
                 Thread.Sleep(3000);
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public void ClickOnSearchButton()
+        {
+            if (SearchBtn.Displayed)
+            {
+                SearchBtn.Click();
+                Thread.Sleep(3000);
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public void ClickOnSetupMenu()
+        {
+            if (SetUp.Displayed)
+            {
+                SetUp.Click();
+                Thread.Sleep(3000);
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public void ClickOnEditContactInfo()
+        {
+            if (EditContactInfo.Displayed)
+            {
+                EditContactInfo.Click();
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public void ClickOnDeveloperConsole()
+        {
+            if (DeveloperConsole.Displayed)
+            {
+                DeveloperConsole.Click();
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public void ClickOnHelpAndTraining()
+        {
+            if (HelpAndTraining.Displayed)
+            {
+                HelpAndTraining.Click();
             }
             else
             {

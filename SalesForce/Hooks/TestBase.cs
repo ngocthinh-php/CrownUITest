@@ -6,6 +6,7 @@ using OpenQA.Selenium.Firefox;
 using SalesForce.Pages;
 using SalesForce.Hooks;
 using SalesForce.TestFeature;
+using System.Threading;
 
 namespace SalesForce.Hooks
 {
@@ -13,11 +14,18 @@ namespace SalesForce.Hooks
     public class TestBase : BasePage
     {
         public TestBase(IWebDriver driver): base(driver) {  }
-        private static string BaseUrl = "https://crowncommercial--pemqa.cs83.my.salesforce.com/";
+        #region Properties
+        //PEMQA
+        //private static string BaseUrl = "https://pemqa-ccs-portal.cs83.force.com/s/login/";
+        //BAUQA
+        private static string BaseUrl = "https://crowncommercial--bauqa.cs86.my.salesforce.com/";
         public static LoginPage login = new LoginPage(driver);
         public static LandingPage landing = new LandingPage(driver);
         public static ArticleManagementPage articlemanagement = new ArticleManagementPage(driver);
-        public static CasesPage cases = new CasesPage(driver);
+        public static CasePage cases = new CasePage(driver);
+        public static CaseNewPage newCase = new CaseNewPage(driver);
+        public static CaseEditPage caseEdit = new CaseEditPage(driver);
+        public static CaseRecordPage caseRecord = new CaseRecordPage(driver);
         public static ContractsPage contracts = new ContractsPage(driver);
         public static ContactsPage contacts = new ContactsPage(driver);
         public static FrameworksPage frameworks = new FrameworksPage(driver);
@@ -31,15 +39,36 @@ namespace SalesForce.Hooks
         public static TriageLevelsPage triage = new TriageLevelsPage(driver);
         public static ChatterPage chatter = new ChatterPage(driver);
         public static AllTabsPage alltabs = new AllTabsPage(driver);
+        public static SearchResultPage search = new SearchResultPage(driver);
+        #endregion
         
-
-
-
-        [BeforeFeature ]
+        [BeforeTestRun]
         public static void TestSetUp()
         {
            driver = SetWebDriver();
            GoToUrl(BaseUrl);
+        }
+
+        /// <summary>
+        /// Admin user login before before starting any test
+        /// </summary>
+        [BeforeFeature("Navigation", "Organisation", "Cases", "Chatter", "Delete")]
+        public static void UserLoginSetup()
+        {
+            TestBase.login.UserLogin("chitta.jena@crowncommercial.gov.uk.bauqa", "Data@3456");
+            Thread.Sleep(5000);
+            TestBase.login.ClickOnLogIn();
+            Thread.Sleep(5000);
+        }
+
+        [AfterFeature]
+        public static void UserLogOut()
+        {
+            TestBase.landing.ClickOnProfileHeader();
+            Thread.Sleep(2000);
+            TestBase.landing.ClickOnLogout();
+            Thread.Sleep(2000);
+
         }
 
         [AfterTestRun]

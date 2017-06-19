@@ -1,7 +1,11 @@
-﻿Feature: 02 - User Navigation
+﻿@Navigation
+Feature: 02 - User Navigation
 	In order to access different parts of the application
 	As a CCS Employee
 	I should be given option to navigate
+
+Background: User is logged in
+	Given I am on Salesforce Landing Page
 
 @RegressionTest
 
@@ -88,4 +92,24 @@ Scenario: 20 User Navigates to Knowledge Page (through navigation link)
 Scenario: 21 User Navigates to Triage Levels Page (through navigation link)	
 	When I click on the Triage Levels link
 	Then I should see the Triage Levels page
+
+Scenario: 22 User navigates to Helpdesk Agent Profile page
+	When I click on the Helpdesk agent profile 
+	Then I should see Helpdesk Agent Profile page
+
+Scenario: 23 User navigates to CCS Business Intelligence Profile page
+	When I click on the CCS Business Intelligence Profile 
+	Then I should see CCS Business Intelligence Profile page
+
+Scenario: 24 User navigates to CCS CRM User profile page
+	When I click on the CCS CRM User profile 
+	Then I should see CCS CRM User profile page
+
+Scenario: 25 User navigates to CCS Framework Users profile page
+	When I click on the CCS Framework Users profile 
+	Then I should see CCS Framework Users profile page
+
+Scenario: 26 User navigates to CCS Procurement & Contract User profile page
+	When I click on the CCS Procurement & Contract User profile
+	Then I should see CCS Procurement & Contract User profile page
 

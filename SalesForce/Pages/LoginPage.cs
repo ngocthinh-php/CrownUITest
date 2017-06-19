@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace SalesForce.Pages
+﻿namespace SalesForce.Pages
 {
     #region Using Directives
     using System;
@@ -34,6 +32,8 @@ namespace SalesForce.Pages
         //private By _chkBoxRememberMe = By.XPath("//*[@id='rememberUn']");
         private By _chkBoxRememberMe = By.Id("rememberUn");
         private By _lnkForgotPassword = By.XPath("//*[@id='forgot_password_link']");
+        private By _labelErrorMessage = By.XPath("//*[@id='error']");
+
         #endregion
 
         #region Properties
@@ -73,9 +73,21 @@ namespace SalesForce.Pages
                 return driver.FindElement(_btnLogIn);
             }
         }
+        public IWebElement ErrorMessage
+        {
+            get
+            {
+                return driver.FindElement(_labelErrorMessage);
+            }
+        }
         #endregion
 
         #region Public methods
+        public void LoginFailure()
+        {
+            string text = ErrorMessage.Text;
+            
+        }
         public void VerifyPage()
         {
             Assert.AreEqual("Login | Salesforce", driver.Title);
@@ -84,7 +96,7 @@ namespace SalesForce.Pages
 
         public void VerifyLoginFailurePage()
         {
-            Assert.AreEqual("Your login attempt has failed. Make sure the username and password are correct.", driver.FindElement(By.XPath("//*[@id='error']/div")).Text);
+            Assert.AreEqual("Your login attempt has failed. Make sure the username and password are correct.", driver.FindElement(_labelErrorMessage).Text);
         }
 
         public void EnterUserEmail(string email)

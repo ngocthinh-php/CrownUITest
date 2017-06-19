@@ -65,10 +65,12 @@ namespace SalesForce.TestFeature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User Logs in to the Salesforce")]
+        [NUnit.Framework.DescriptionAttribute("1 Failed Login to the Salesforce")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.pemqa", "Data@3456", new string[0])]
-        public virtual void UserLogsInToTheSalesforce(string email, string password, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.bauqa", "", "Please enter your password.", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.bauqa", "Data1111", "Please check your username and password. If you still can\'t log in, contact your " +
+            "Salesforce administrator.", new string[0])]
+        public virtual void _1FailedLoginToTheSalesforce(string email, string password, string errormessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "RegressionTest"};
@@ -76,19 +78,37 @@ namespace SalesForce.TestFeature
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Logs in to the Salesforce", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 Failed Login to the Salesforce", @__tags);
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.Given("I have navigated to Salesforce login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When(string.Format("I enter user details with {0} and {1}", email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter user details {0}, {1}", email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.And("I click on Remember Me check box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
  testRunner.And("I click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
- testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ testRunner.Then(string.Format("I should see Error Message {0}", errormessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("2 Successful User Login to the Salesforce")]
+        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.bauqa", "Data@3456", new string[0])]
+        public virtual void _2SuccessfulUserLoginToTheSalesforce(string email, string password, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 Successful User Login to the Salesforce", exampleTags);
+#line 17
+this.ScenarioSetup(scenarioInfo);
+#line 18
+ testRunner.Given("I have navigated to Salesforce login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.When(string.Format("I enter user details {0}, {1}", email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.And("I click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
+ testRunner.Then("I should be navigated to landingpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -17,7 +17,10 @@ namespace CrownUITest.Hooks
   public class TestBase : BasePage
     {
         public TestBase(IWebDriver driver): base(driver) {  }
-        private static string BaseUrl = "https://pemqa-ccs-portal.cs83.force.com/s/login/";
+        //PEMQA
+        //private static string BaseUrl = "https://pemqa-ccs-portal.cs83.force.com/s/login/";
+        //BAUQA
+        private static string BaseUrl = "https://crowncommercial--bauqa.cs86.my.salesforce.com/";
         public static PortalLoginPage login = new PortalLoginPage(driver);
         public static PortalHomePage home = new PortalHomePage(driver);
         public static PortalForgotPasswordPage forgotpassword = new PortalForgotPasswordPage(driver);

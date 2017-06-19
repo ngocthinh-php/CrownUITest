@@ -12,33 +12,22 @@ namespace SalesForce.TestSteps
     [Binding]
     public sealed class CreateOrganisationSteps
     {
-        [Given(@"I am on Organisation Home Page")]
-        public void GivenIAmOnOrganisationHomePage()
+        [Given(@"I am on Select New Organisation Record Type page")]
+        public void GivenIAmOnSelectNewOrganisationRecordTypePage()
         {
-            TestBase.login.UserLogin("chitta.jena@crowncommercial.gov.uk.pemqa", "Data@3456");
-            Thread.Sleep(5000);
-            TestBase.login.ClickOnLogIn();
-            Thread.Sleep(5000);
             TestBase.landing.ClickOnOrganisationTab();
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
             TestBase.organisations.VerifyPage();
-        }
-
-        [When(@"I click on New button")]
-        public void WhenIClickOnNewButton()
-        {
+            Thread.Sleep(2000);
             TestBase.organisations.ClickOnNewOrganisationBtn();
-        }
-
-        [Then(@"I should be directed to Select New Organisation Record Type page")]
-        public void ThenIShouldBeDirectedToSelectNewOrganisationRecordTypePage()
-        {
+            Thread.Sleep(2000);
             TestBase.newOrg.VerifyPage();
         }
         [When(@"I Select Organisation Record Type as (.*)")]
         public void WhenISelectOrganisationRecordTypeAs(string organisation)
         {
             TestBase.newOrg.SelectOrganisationType(organisation);
+            //TestBase.newOrg.selectList(organisation);
         }
 
         [When(@"Click on Continue button")]
@@ -75,24 +64,6 @@ namespace SalesForce.TestSteps
             TestBase.orgEdit.SelectOrganisationType(organisationType);
             Thread.Sleep(3000);
          }
-        //[When(@"I enter mandatory information Customer(.*) and select Local Government and select Active")]
-        //public void WhenIEnterMandatoryInformationCustomerAndSelectLocalGovernmentAndSelectActive(int p0)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-
-        //[Then(@"I Should be presented with organisation type drop down")]
-        //public void ThenIShouldBePresentedWithOrganisationTypeDropDown()
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-
-        //[When(@"I select a value from County Council drop down field")]
-        //public void WhenISelectAValueFromCountyCouncilDropDownField()
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-
         [When(@"click on Save button")]
         public void WhenClickOnSaveButton()
         {
@@ -103,25 +74,8 @@ namespace SalesForce.TestSteps
         public void ThenANewOrganisationWouldBeCreated(string organisationName)
         {
             TestBase.orgRecord.VerifyPage(organisationName);
+            Thread.Sleep(3000);
+           
         }
-
-        //[When(@"I Select Organisation Record Type as Customer")]
-        //public void WhenISelectOrganisationRecordTypeAsCustomer()
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-
-        //[When(@"I enter mandatory information Supplier(.*) and select Public Sector")]
-        //public void WhenIEnterMandatoryInformationSupplierAndSelectPublicSector(int p0)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-
-        //[When(@"I select a value from Health drop down field")]
-        //public void WhenISelectAValueFromHealthDropDownField()
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-
     }
 }

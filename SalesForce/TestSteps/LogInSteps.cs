@@ -23,18 +23,14 @@
             Thread.Sleep(3000);
         }
 
-        [When(@"I enter user details with (.*) and (.*)")]
-        public void WhenIEnterUserDetailsWithEmailAndPassword(string email, string password)
+        [When(@"I enter user details (.*),(.*)")]
+        public void WhenIEnterUserDetails(string email, string password)
         {
             TestBase.login.UserLogin(email, password);
             Thread.Sleep(5000);
-        }
-
-        [When(@"I click on Remember Me check box")]
-        public void WhenIClickOnRememberMeCheckBox()
-        {
             TestBase.login.ClickOnRememberMe();
             Thread.Sleep(3000);
+
         }
 
         [When(@"I click on Login button")]
@@ -44,12 +40,17 @@
             Thread.Sleep(5000);
         }
 
-        [Then(@"I should be logged in successfully")]
-        public void ThenIShouldBeLoggedInSuccessfully()
+        [Then(@"I should be navigated to landingpage")]
+        public void ThenIShouldBeNavigatedToLandingpage()
         {
             TestBase.landing.VerifyPage();
         }
 
-       
+        [Then(@"I should see Error Message(.*)")]
+        public void ThenIShoulSeeErrorMessage(string errormessage)
+        {
+            Assert.IsTrue(TestBase.login.ErrorMessage.Displayed);
+            Assert.AreEqual(errormessage, TestBase.login.ErrorMessage.Text);
+        }     
     }
 }

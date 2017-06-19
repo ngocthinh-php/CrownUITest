@@ -18,8 +18,8 @@ namespace SalesForce.TestFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("09 - User Logs out of Salesforce")]
-    public partial class _09_UserLogsOutOfSalesforceFeature
+    [NUnit.Framework.DescriptionAttribute("25 - User Logs out of Salesforce")]
+    public partial class _25_UserLogsOutOfSalesforceFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace SalesForce.TestFeature
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "09 - User Logs out of Salesforce", "\tIn order to come out of my profile\r\n\tAs a CCS portal user  \r\n\tI should be given " +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "25 - User Logs out of Salesforce", "\tIn order to come out of my profile\r\n\tAs a CCS portal user  \r\n\tI should be given " +
                     "an option to click", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }

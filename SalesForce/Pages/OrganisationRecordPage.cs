@@ -21,8 +21,8 @@
 
         #region Properties and fields
         private By _lblOrganisationNameHeader = By.XPath("//*[@id='contactHeaderRow']/div[2]/h2");
-        private By _tabFeed = By.XPath("//*[@id='efpViews_0014E00000XY6VH_option0']");
-        private By _tabDetails = By.XPath("//*[@id='efpViews_0014E00000XY6VH_option1']");
+        private By _tabFeed = By.XPath("//*[@id='efpViews_0017E00000XoMd6_option0']");
+        private By _tabDetails = By.XPath("//*[@id='efpViews_0017E00000XoMd6_option1']");
         private By _btnEditTop = By.XPath("//*[@id='topButtonRow']/input[3]");
         private By _btnEditBottom = By.XPath("//*[@id='bottomButtonRow']/input[3]");
         private By _btnDeleteTop = By.XPath("//*[@id='topButtonRow']/input[4]");
@@ -76,6 +76,20 @@
                 return driver.FindElement(_tabDetails);
             }
         }
+        public IWebElement TopDeleteButton
+        {
+            get
+            {
+                return driver.FindElement(_btnDeleteTop);
+            }
+        }
+        public IWebElement BottomDeleteButton
+        {
+            get
+            {
+                return driver.FindElement(_btnDeleteBottom);
+            }
+        }
         #endregion
 
         #region public method
@@ -87,7 +101,69 @@
         {
             Assert.AreEqual(("'Organisation: '+ organisationName + ' ~ Salesforce - Enterprise Edition'"), driver.Title);
         }
-        
+        public void ClickOnFeedTab()
+        {
+            if (DetailsTab.Enabled)
+            {
+                FeedTab.Click();
+            }
+            else
+            {
+                throw new Exception("Feed tab is not found or not clickable");
+            }
+        }
+        public void ClickOnDetailsTab()
+        {
+            if (FeedTab.Enabled)
+            {
+                DetailsTab.Click();
+            }
+            else
+            {
+                throw new Exception("Details tab is not found or not clickable");
+            }
+        }
+        public void ClickTopDeleteButton()
+        {
+            if (TopDeleteButton.Displayed)
+            {
+                TopDeleteButton.Click();
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public void ClickBottomDeleteButton()
+        {
+            if (BottomDeleteButton.Displayed)
+            {
+                BottomDeleteButton.Click();
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public void ClickOnConfirmDelete()
+        {
+           
+             driver.SwitchTo().Alert().Accept();
+         
+        }
         #endregion
+        public Boolean isAlertPresent()
+        {
+            try
+            {
+                driver.SwitchTo().Alert();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
     }
 }
