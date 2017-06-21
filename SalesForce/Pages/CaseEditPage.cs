@@ -34,6 +34,8 @@
         private By _txtDescription = By.XPath("//*[@id='cas15']");
         //-----------------------------------------------------
 
+        private By _listWorkflow = By.XPath("//*[@id='00Nb000000ASLvS']");
+
         private By _btnSaveTop = By.XPath("//*[@id='topButtonRow']/input[1]");
         private By _btnSaveAndCloseTop = By.XPath("//*[@id='topButtonRow']/input[2]");
         private By _btnSaveAndNewTop = By.XPath("//*[@id='topButtonRow']/input[3]");
@@ -114,6 +116,13 @@
             get
             {
                 return driver.FindElement(_txtDescription);
+            }
+        }
+        public IWebElement Workflow
+        {
+            get
+            {
+                return driver.FindElement(_listWorkflow);
             }
         }
 
@@ -296,20 +305,12 @@
         }
         public void SelectCaseStatus(string status)
         {
-            if (CaseStatus.Displayed == true)
-            {
-                CaseStatus.Click();
-                var x2 = status;
-                var x1 = "//*[contains(text(),'";
-                var x3 = "')]";
-                Thread.Sleep(3000);
-                driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
+            IWebElement dropDownListBox = driver.FindElement(_listStatus);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(status);
+            //Thread.Sleep(2000);
 
-            }
-            else
-            {
-                throw new Exception("Status List could not be selected");
-            }
         }
         public void SelectCasePriority(string priority)
         {
@@ -334,20 +335,11 @@
         }
         public void SelectCaseOrigin(string caseOrigin)
         {
-            if (CaseOrigin.Displayed)
-            {
-                CaseOrigin.Click();
-                var x2 = caseOrigin;
-                var x1 = "//*[contains(text(),'";
-                var x3 = "')]";
-                Thread.Sleep(3000);
-                driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
-
-            }
-            else
-            {
-                throw new Exception("Case Origin could not be selected");
-            }
+            IWebElement dropDownListBox = driver.FindElement(_listCaseOrigin);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(caseOrigin);
+            //Thread.Sleep(2000);
         }
         public void EnterCaseSubject(string subject)
         {
@@ -357,7 +349,16 @@
         {
             GetDisplayedElement(_txtDescription, 500, 15000).SendKeys(description);
         }
+        public void SelectWorkflow(string workFlow)
+        {
+             IWebElement dropDownListBox = driver.FindElement(_listStatus);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(status);
+            //Thread.Sleep(2000);
 
+       
+        }
         public void CreateEnquiryCase(string orgName, string contactName, string team, string status, string priority, string triageLevel, string caseOrigin, string subject, string description)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));

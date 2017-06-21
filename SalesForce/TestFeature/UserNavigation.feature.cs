@@ -111,10 +111,10 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("03 User Navigates to Organisations Page (through tab)")]
-        public virtual void _03UserNavigatesToOrganisationsPageThroughTab()
+        [NUnit.Framework.DescriptionAttribute("28 User Navigates to Organisations Page (through tab)")]
+        public virtual void _28UserNavigatesToOrganisationsPageThroughTab()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 User Navigates to Organisations Page (through tab)", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("28 User Navigates to Organisations Page (through tab)", ((string[])(null)));
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 7

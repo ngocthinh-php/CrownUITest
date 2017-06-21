@@ -76,10 +76,10 @@ namespace SalesForce.TestFeature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Create Enquiry Case")]
+        [NUnit.Framework.DescriptionAttribute("01 Create Enquiry Case")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("Enquiry", "Customer004", "Test004 Contact", "--None--", "Open", "Green", "Level 1", "Email", "Enquiry Case", "Enquiry Case Test001", new string[0])]
-        public virtual void CreateEnquiryCase(string caseType, string orgName, string contactName, string team, string status, string priority, string triageLevel, string caseOrigin, string subject, string description, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Enquiry", "Customer001", "Test001 Contact", "--None--", "Open", "Green", "Level 1", "Email", "Enquiry Case", "Enquiry Case Test001", new string[0])]
+        public virtual void _01CreateEnquiryCase(string caseType, string orgName, string contactName, string team, string status, string priority, string triageLevel, string caseOrigin, string subject, string description, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "RegressionTest"};
@@ -87,7 +87,7 @@ namespace SalesForce.TestFeature
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Enquiry Case", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Create Enquiry Case", @__tags);
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 7
@@ -97,15 +97,40 @@ this.FeatureBackground();
 #line 13
  testRunner.Then("I should be navigated to Case type Selection page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 14
- testRunner.When(string.Format("I select case Type as {0}", caseType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I select case Type as {0} and continue", caseType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15
- testRunner.And("Click on Continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
  testRunner.Then("I should be presented with Case Edit screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+ testRunner.When(string.Format("I populate mandatory Enquiry case information {0}, {1}, {2}, {3}, {4}, {5}, {6}, " +
+                        "{7}, {8} for the case and Save the record", orgName, contactName, team, status, priority, triageLevel, caseOrigin, subject, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
- testRunner.When(string.Format("I populate mandatory information {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8} for " +
-                        "the case and Save the record", orgName, contactName, team, status, priority, triageLevel, caseOrigin, subject, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+ testRunner.Then("a Case record be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("01 Create Tech Support Case")]
+        [NUnit.Framework.TestCaseAttribute("Tech Support", "Customer005", "Test001 Contact", "Technology Support", "Phone", "Triage", "Incident", "Open", "Green", "eMarketplace", "User Accounts", "New User", "Tech Support Case with Email", "Tech Support Case with Email", new string[0])]
+        public virtual void _01CreateTechSupportCase(string caseType, string orgName, string contactName, string team, string caseOrigin, string workflow, string category, string status, string priority, string supportClassification, string sCLevel1, string sCLevel2, string subject, string description, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Create Tech Support Case", exampleTags);
+#line 22
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 23
+ testRunner.When("I click on New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+ testRunner.Then("I should be navigated to Case type Selection page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 25
+ testRunner.When(string.Format("I select case Type as {0} and continue", caseType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+ testRunner.Then("I should be presented with Case Edit screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 27
+ testRunner.When(string.Format("I populate mandatory Tech Support Case information {0}, {1}, {2}, {3}, {4}, {5}, " +
+                        "{6}, {7}, {8}, {9},{10}, {11}, {12} for the case and Save the record", orgName, contactName, team, caseOrigin, workflow, category, status, priority, supportClassification, sCLevel1, sCLevel2, subject, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
  testRunner.Then("a Case record be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

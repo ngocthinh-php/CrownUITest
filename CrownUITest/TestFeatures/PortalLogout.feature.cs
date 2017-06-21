@@ -18,8 +18,8 @@ namespace CrownUITest.TestFeatures
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Portal Logout")]
-    public partial class PortalLogoutFeature
+    [NUnit.Framework.DescriptionAttribute("P04 - Portal Logout")]
+    public partial class P04_PortalLogoutFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace CrownUITest.TestFeatures
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Portal Logout", "\tIn order to come out of my profile\r\n\tAs a CCS portal user  \r\n\tI should be given " +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "P04 - Portal Logout", "\tIn order to come out of my profile\r\n\tAs a CCS portal user  \r\n\tI should be given " +
                     "an option to click", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }

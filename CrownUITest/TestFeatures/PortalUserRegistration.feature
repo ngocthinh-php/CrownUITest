@@ -1,4 +1,4 @@
-﻿Feature: Portal Registeration process
+﻿Feature: P03 - Portal Registeration process
 	In order to access ccs purchasing platform information and supplier details
 	As an user / customer
 	I want to be given option to register

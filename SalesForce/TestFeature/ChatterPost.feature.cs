@@ -18,9 +18,9 @@ namespace SalesForce.TestFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ChatterPost")]
+    [NUnit.Framework.DescriptionAttribute("09 - ChatterPost")]
     [NUnit.Framework.CategoryAttribute("Chatter")]
-    public partial class ChatterPostFeature
+    public partial class _09_ChatterPostFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -32,7 +32,7 @@ namespace SalesForce.TestFeature
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ChatterPost", "\tIn order to be part of the community\r\n\tAs a CCS system user\r\n\tI should be able t" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "09 - ChatterPost", "\tIn order to be part of the community\r\n\tAs a CCS system user\r\n\tI should be able t" +
                     "o see the posts, raise questions, cases", ProgrammingLanguage.CSharp, new string[] {
                         "Chatter"});
             testRunner.OnFeatureStart(featureInfo);

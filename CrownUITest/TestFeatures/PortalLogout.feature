@@ -1,4 +1,4 @@
-﻿Feature: Portal Logout
+﻿Feature: P04 - Portal Logout
 	In order to come out of my profile
 	As a CCS portal user  
 	I should be given an option to click

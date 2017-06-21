@@ -18,8 +18,8 @@ namespace CrownUITest.TestFeatures
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Portal Log in tests")]
-    public partial class PortalLogInTestsFeature
+    [NUnit.Framework.DescriptionAttribute("P01 - Portal Log in tests")]
+    public partial class P01_PortalLogInTestsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace CrownUITest.TestFeatures
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Portal Log in tests", "\tIn order to access necessary information on purchasing platform \r\n\tAs a CCS port" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "P01 - Portal Log in tests", "\tIn order to access necessary information on purchasing platform \r\n\tAs a CCS port" +
                     "al user\r\n\tI want to be able to log in to the portal", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }

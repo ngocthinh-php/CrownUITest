@@ -21,7 +21,8 @@
         #endregion
 
         private By _lstRecordType = By.XPath("//*[@id='p3']");
-        private By _btnContinue = By.XPath("//*[@id='bottomButtonRow']/input[1]");
+        //private By _btnContinue = By.XPath("//*[@id='bottomButtonRow']/input[1]");
+        private By _btnContinue = By.CssSelector("#bottomButtonRow > input[name=\"save\"]");
         private By _btnCancel = By.XPath("//*[@id='bottomButtonRow']/input[2]");
 
         public IWebElement ContinueButton
@@ -50,9 +51,9 @@
         {
             IWebElement dropDownListBox = driver.FindElement(_lstRecordType);
             SelectElement clickThis = new SelectElement(dropDownListBox);
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             clickThis.SelectByText(caseType);
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
         }
         public void VerifyPage()

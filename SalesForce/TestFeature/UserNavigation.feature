@@ -17,7 +17,7 @@ Scenario: 02 User Navigates to Catter Page (through tab)
 	When I click on the Chatter tab
 	Then I should see the Chatter page
 
-Scenario: 03 User Navigates to Organisations Page (through tab)	
+Scenario: 28 User Navigates to Organisations Page (through tab)	
 	When I click on the Organisations tab
 	Then I should see the Organisations page
 

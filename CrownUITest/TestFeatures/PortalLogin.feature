@@ -1,4 +1,4 @@
-﻿Feature: Portal Log in tests
+﻿Feature: P01 - Portal Log in tests
 	In order to access necessary information on purchasing platform 
 	As a CCS portal user
 	I want to be able to log in to the portal

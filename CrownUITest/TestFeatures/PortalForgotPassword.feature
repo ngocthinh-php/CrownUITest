@@ -1,4 +1,4 @@
-﻿Feature: Reset Password 
+﻿Feature: P02 - Reset Password 
 	In order to access my account or profile 
 	As a buyer
 	I want to be reminded of my password to log in to the account

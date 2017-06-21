@@ -19,6 +19,7 @@ namespace SalesForce.Hooks
         //private static string BaseUrl = "https://pemqa-ccs-portal.cs83.force.com/s/login/";
         //BAUQA
         private static string BaseUrl = "https://crowncommercial--bauqa.cs86.my.salesforce.com/";
+
         public static LoginPage login = new LoginPage(driver);
         public static LandingPage landing = new LandingPage(driver);
         public static ArticleManagementPage articlemanagement = new ArticleManagementPage(driver);

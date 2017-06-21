@@ -1,6 +1,6 @@
 ﻿@Survey
 #related to [US2524, US2536]
-Feature: 09 - Survey Feedback Object 
+Feature: 12 - Survey Feedback Object 
 	In order to allow the users to input their Survey comments
 	As a CCS business team
 	I want to have a mechanism to allow users to input a text with a length in line with Clicktool

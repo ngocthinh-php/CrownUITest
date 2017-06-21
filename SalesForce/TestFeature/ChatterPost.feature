@@ -1,5 +1,5 @@
 ﻿@Chatter
-Feature: ChatterPost
+Feature: 09 - ChatterPost
 	In order to be part of the community
 	As a CCS system user
 	I should be able to see the posts, raise questions, cases

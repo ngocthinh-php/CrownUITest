@@ -18,8 +18,8 @@ namespace CrownUITest.TestFeatures
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Portal Registeration process")]
-    public partial class PortalRegisterationProcessFeature
+    [NUnit.Framework.DescriptionAttribute("P03 - Portal Registeration process")]
+    public partial class P03_PortalRegisterationProcessFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace CrownUITest.TestFeatures
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Portal Registeration process", "\tIn order to access ccs purchasing platform information and supplier details\r\n\tAs" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "P03 - Portal Registeration process", "\tIn order to access ccs purchasing platform information and supplier details\r\n\tAs" +
                     " an user / customer\r\n\tI want to be given option to register", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }

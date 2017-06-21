@@ -8,14 +8,26 @@ Background:
 	Given I am on Cases page
 @RegressionTest
 
-Scenario Outline: Create Enquiry Case
+Scenario Outline: 01 Create Enquiry Case
 	When I click on New button
 	Then I should be navigated to Case type Selection page
-	When I select case Type as <caseType>
-	And Click on Continue button
+	When I select case Type as <caseType> and continue
 	Then I should be presented with Case Edit screen
-	When I populate mandatory information <orgName>, <contactName>, <team>, <status>, <priority>, <triageLevel>, <caseOrigin>, <subject>, <description> for the case and Save the record
+	When I populate mandatory Enquiry case information <orgName>, <contactName>, <team>, <status>, <priority>, <triageLevel>, <caseOrigin>, <subject>, <description> for the case and Save the record
 	Then a Case record be created successfully 
 Examples: 
 | caseType | orgName     | contactName     | team     | status | priority | triageLevel | caseOrigin | subject      | description          |
-| Enquiry  | Customer004 | Test004 Contact | --None-- | Open   | Green    | Level 1     | Email      | Enquiry Case | Enquiry Case Test001 |
+| Enquiry  | Customer001 | Test001 Contact | --None-- | Open   | Green    | Level 1     | Email      | Enquiry Case | Enquiry Case Test001 |
+
+Scenario Outline: 01 Create Tech Support Case
+	When I click on New button
+	Then I should be navigated to Case type Selection page
+	When I select case Type as <caseType> and continue
+	Then I should be presented with Case Edit screen
+	When I populate mandatory Tech Support Case information <orgName>, <contactName>, <team>, <caseOrigin>, <workflow>, <category>, <status>, <priority>, <supportClassification>, <SCLevel1>,<SCLevel2>, <subject>, <description> for the case and Save the record
+	Then a Case record be created successfully 
+Examples: 
+| caseType     | orgName     | contactName     | team               | caseOrigin | workflow | category | status | priority | supportClassification | SCLevel1      | SCLevel2 | subject                      | description                  |
+| Tech Support | Customer005 | Test001 Contact | Technology Support | Phone      | Triage   | Incident | Open   | Green    | eMarketplace          | User Accounts | New User | Tech Support Case with Email | Tech Support Case with Email |
+
+
