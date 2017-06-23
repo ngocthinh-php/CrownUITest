@@ -9,6 +9,7 @@
     using OpenQA.Selenium;
     using NUnit.Framework;
     using System.Threading;
+    using OpenQA.Selenium.Support.UI;
     #endregion
 
     public class OrganisationEditPage : BasePage
@@ -49,6 +50,8 @@
         private By _btnSaveBottom = By.XPath("//*[@id='bottomButtonRow']/input[1]");
         private By _btnSaveAndNewBottom = By.XPath("//*[@id='bottomButtonRow']/input[2]");
         private By _btnCancelBottom = By.XPath("//*[@id='bottomButtonRow']/input[3]");
+        private By _txtDUNSNumber = By.XPath("//*[@id='00Nb000000ASESE']");
+        private By _txtIndirectSME = By.XPath("//*[@id='00N7E0000017tSI']");
         #endregion
 
         #region define element attributes
@@ -106,6 +109,20 @@
             get
             {
                 return driver.FindElement(_lstOrganisationType);
+            }
+        }
+        public IWebElement DUNSNumber
+        {
+            get
+            {
+                return driver.FindElement(_txtDUNSNumber);
+            }
+        }
+        public IWebElement IndirectSME
+        {
+            get
+            {
+                return driver.FindElement(_txtIndirectSME);
             }
         }
         public IWebElement CCSExecutiveSponsorList
@@ -336,12 +353,16 @@
         {
             if (Sector.Displayed)
             {
-                Sector.Click();
-                var x2 = selectSector;
-                var x1 = "//*[contains(text(),'";
-                var x3 = "')]";
-                Thread.Sleep(3000);
-                driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
+                IWebElement dropDownListBox = Sector;
+                SelectElement clickThis = new SelectElement(dropDownListBox);
+                clickThis.SelectByText(selectSector);
+
+                //Sector.Click();
+                //var x2 = selectSector;
+                //var x1 = "//*[contains(text(),'";
+                //var x3 = "')]";
+                //Thread.Sleep(3000);
+                //driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
 
             }
             else
@@ -353,12 +374,16 @@
         {
             if (OrganisationType.Displayed)
             {
-                OrganisationType.Click();
-                var x2 = orgType;
-                var x1 = "//*[contains(text(),'";
-                var x3 = "')]";
-                Thread.Sleep(3000);
-                driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
+                IWebElement dropDownListBox = OrganisationType;
+                SelectElement clickThis = new SelectElement(dropDownListBox);
+                clickThis.SelectByText(orgType);
+
+                //OrganisationType.Click();
+                //var x2 = orgType;
+                //var x1 = "//*[contains(text(),'";
+                //var x3 = "')]";
+                //Thread.Sleep(3000);
+                //driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
 
             }
             else
@@ -378,10 +403,6 @@
                 driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
 
             }
-            else if(StatusList.Displayed != true)
-            {
-                
-            }
             else
             {
                 throw new Exception("Status List could not be selected");
@@ -391,7 +412,14 @@
         {
             GetDisplayedElement(_txtOrganisationName, 500, 15000).SendKeys(organisationName);
         }
-     
+        public void EnterDUNSNumber(string dunsNumber)
+        {
+            GetDisplayedElement(_txtDUNSNumber, 500, 15000).SendKeys(dunsNumber);
+        }
+        public void EnterIndirectSME(string indirectSME)
+        {
+            GetDisplayedElement(_txtIndirectSME, 500, 15000).SendKeys(indirectSME);
+        }
         #endregion
     }
 }

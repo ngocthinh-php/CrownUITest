@@ -330,7 +330,9 @@
         public void UserEntersFirstName(string firstName)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='318:0']")));
+            //wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='318:0']")));
+            wait.Until(ExpectedConditions.ElementToBeClickable(_txtFirstName));
+            
             FirstName.Clear();
             FirstName.SendKeys(firstName);
             Thread.Sleep(2000);            

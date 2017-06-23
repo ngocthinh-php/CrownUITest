@@ -54,8 +54,8 @@ namespace SalesForce.TestSteps
             TestBase.orgEdit.SelectStatus(status);
             Thread.Sleep(3000); 
         }
-        [When(@"I enter mandatory information for supplier(.*), (.*), (.*)")]
-        public void WhenIEnterMandatoryInformationForSupplier(string organisationName, string sector, string organisationType)
+        [When(@"I enter mandatory information for supplier(.*), (.*), (.*), (.*), (.*)")]
+        public void WhenIEnterMandatoryInformationForSupplier(string organisationName, string sector, string organisationType, string dunsNumber, string indirectSME)
         {
             TestBase.orgEdit.EnterOrganisationName(organisationName);
             Thread.Sleep(3000);
@@ -63,6 +63,10 @@ namespace SalesForce.TestSteps
             Thread.Sleep(3000);
             TestBase.orgEdit.SelectOrganisationType(organisationType);
             Thread.Sleep(3000);
+            TestBase.orgEdit.EnterDUNSNumber(dunsNumber);
+            Thread.Sleep(2000);
+            TestBase.orgEdit.EnterIndirectSME(indirectSME);
+            Thread.Sleep(2000);
          }
         [When(@"click on Save button")]
         public void WhenClickOnSaveButton()

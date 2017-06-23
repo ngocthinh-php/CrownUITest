@@ -43,6 +43,7 @@ namespace SalesForce.Pages
         private By _lnkEditContactInfo = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[3]/a");
         private By _lnkDeveloperConsole = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[4]/a");
         private By _lnkHelpAndTraining = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[5]/a");
+        private By _lnkCategories = By.XPath("");
 
         //private By _lnkLogOut = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[6]/a");
         private By _lnkLogOut = By.LinkText("Logout");
@@ -245,7 +246,13 @@ namespace SalesForce.Pages
                 return driver.FindElement(_lnkLogOut);
             }
         }
-
+        public IWebElement Categories
+        {
+            get
+            {
+                return driver.FindElement(_lnkCategories);
+            }
+        }
         #endregion
 
         #region Public methods
@@ -474,6 +481,18 @@ namespace SalesForce.Pages
                 throw new Exception("Element is not found or not clickable");
             }
         }
+        public void ClickOnCategoriesLink()
+        {
+            if (Categories.Displayed)
+            {
+                Categories.Click();
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+
         #endregion
     }
 }

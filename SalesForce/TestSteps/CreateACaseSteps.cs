@@ -50,7 +50,7 @@ namespace SalesForce.TestSteps
         }
 
         [When(@"I populate mandatory Enquiry case information (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*) for the case and Save the record")]
-        public void WhenIPopulateMandatoryEnquiryCaseInformationForTheCaseAndSaveTheRecord(string orgName, string contactName, string team, string status, string priority, string triageLevel, string caseOrigin, string subject, string description)
+        public void WhenIPopulateMandatoryEnquiryCaseInformationForTheCaseAndSaveTheRecord(string orgName, string contactName, string team, string status, string priority, string triageLevel, string caseOrigin, string caseSubject, string description)
         {
             TestBase.caseEdit.EnterOrganisationName(orgName);
             //Thread.Sleep(2000);
@@ -66,10 +66,43 @@ namespace SalesForce.TestSteps
             //Thread.Sleep(2000);
             TestBase.caseEdit.SelectCaseOrigin(caseOrigin);
             //Thread.Sleep(2000);
-            TestBase.caseEdit.EnterCaseSubject(subject);
+            TestBase.caseEdit.EnterCaseSubject(caseSubject);
+            Thread.Sleep(2000);
             TestBase.caseEdit.EnterCaseDescription(description);
             //Thread.Sleep(2000);
             //TestBase.caseEdit.CreateEnquiryCase(orgName, contactName, team, status, priority, triageLevel, caseOrigin, subject, description);
+        }
+
+        [When(@"I populate mandatory Tech Support Case information (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*). (.*), (.*) for the case and Save the record")]
+        public void WhenIPopulateMandatoryTechSupportCaseInformationForTheCaseAndSaveTheRecord(string orgName, string contactName, string technologyTeam, string caseOrigin, string workflow, string category, string status, string priority, string supportClassification, string SCLevel1, string SCLevel2, string subject, string description)
+        {
+            //TestBase.caseEdit.EnterOrganisationName(orgName);
+            //Thread.Sleep(2000);
+            //TestBase.caseEdit.EnterContactName(contactName);
+            //Thread.Sleep(2000);
+            TestBase.caseEdit.SelectATechnologyTeam(technologyTeam);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectCaseOrigin(caseOrigin);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectWorkflow(workflow);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectCategory(category);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectCaseStatus(status);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectCasePriority(priority);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectSupportClassification(supportClassification);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectSCLevel1(SCLevel1);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.SelectSCLevel2(SCLevel2);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.EnterCaseSubject(subject);
+            Thread.Sleep(2000);
+            TestBase.caseEdit.EnterCaseDescription(description);
+            Thread.Sleep(2000);
+            //TestBase.caseEdit.CreateTechSupportCase(orgName, contactName, technologyTeam, caseOrigin, workflow, category, status, priority, supportClassification, SCLevel1, SCLevel2, subject, description);
         }
 
         [Then(@"a Case record be created successfully")]

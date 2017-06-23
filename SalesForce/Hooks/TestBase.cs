@@ -22,19 +22,43 @@ namespace SalesForce.Hooks
 
         public static LoginPage login = new LoginPage(driver);
         public static LandingPage landing = new LandingPage(driver);
-        public static ArticleManagementPage articlemanagement = new ArticleManagementPage(driver);
+
+        //Case Management-----------------------------------------------------------------------------------
         public static CasePage cases = new CasePage(driver);
         public static CaseNewPage newCase = new CaseNewPage(driver);
         public static CaseEditPage caseEdit = new CaseEditPage(driver);
         public static CaseRecordPage caseRecord = new CaseRecordPage(driver);
+        public static CaseMassDeletePage caseMassDelete = new CaseMassDeletePage(driver);
+        //--------------------------------------------------------------------------------------------------
+
+        
         public static ContractsPage contracts = new ContractsPage(driver);
+
+        //Contacts------------------------------------------------------------------------------------------
         public static ContactsPage contacts = new ContactsPage(driver);
+        public static ContactsEditPage contactEdit = new ContactsEditPage(driver);
+        public static ContactsRecordPage contactRecord = new ContactsRecordPage(driver);
+        public static ContactsMassDeletePage contactMassDelete = new ContactsMassDeletePage(driver);
+        //--------------------------------------------------------------------------------------------------
+
+        public static ArticleManagementPage articlemanagement = new ArticleManagementPage(driver);
         public static FrameworksPage frameworks = new FrameworksPage(driver);
         public static KnowledgePage knowledge = new KnowledgePage(driver);
+
+        //Organisations-------------------------------------------------------------------------------------
         public static OrganisationsPage organisations = new OrganisationsPage(driver);
         public static OrganisationNewPage newOrg = new OrganisationNewPage(driver);
         public static OrganisationEditPage orgEdit = new OrganisationEditPage(driver);
         public static OrganisationRecordPage orgRecord = new OrganisationRecordPage(driver);
+        public static OrganisationMassDeletePage orgMassDelete = new OrganisationMassDeletePage(driver);
+        //--------------------------------------------------------------------------------------------------
+
+        //Categories----------------------------------------------------------------------------------------
+        public static CategoriesPage category = new CategoriesPage(driver);
+        public static CategoriesEditPage catEdit = new CategoriesEditPage(driver);
+        public static CategoriesRecordPage catRecord = new CategoriesRecordPage(driver);
+        //--------------------------------------------------------------------------------------------------
+
         public static ProfileHomePage home = new ProfileHomePage(driver);
         public static ReportsPage reports = new ReportsPage(driver);
         public static TriageLevelsPage triage = new TriageLevelsPage(driver);
@@ -53,7 +77,7 @@ namespace SalesForce.Hooks
         /// <summary>
         /// Admin user login before before starting any test
         /// </summary>
-        [BeforeFeature("Navigation", "Organisation", "Cases", "Chatter", "Delete")]
+        [BeforeFeature("Navigation", "Organisation", "Contacts", "Cases", "Chatter", "Delete")]
         public static void UserLoginSetup()
         {
             TestBase.login.UserLogin("chitta.jena@crowncommercial.gov.uk.bauqa", "Data@3456");

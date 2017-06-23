@@ -9,29 +9,29 @@ Background: User is logged in
 @RegressionTest
 Scenario Outline: 01 Delete Case Data
 	Given I am on the Mass Delete Cases Page
-	When I filter based on <contactName> and <accountName> 
-	And I press Delete button
+	When I filter the case data <column1Row1>, <operator1>, <value1>, <column1Row2>, <operator2>, <value2>
+	And I press Case Delete button
 	Then all the related case records are deleted	
 Examples: 
-| contactName | accountName |
-| Contact     | Customer    |
-| Contact     | Supplier    |
+	| column1Row1 | operator1 | value1  | column1Row2 | operator2   | value2 |
+	| Last Name   | equals    | Contact | First Name  | starts with | Test   |
+	
 Scenario Outline: 02 Delete Contact Data
 	Given I am on the Mass Delete Contact Page
-	When I filter based on <lastName> and <firstName>
-	And I press Delete button
+	When I filter the contact data <column1Row1>, <operator1>, <value1>
+	And I press Contact Delete button
 	Then all the related contact records are deleted	
 Examples: 
-| lastName | firstName |
-| Contact  | Test      |
+	| column1Row1 | operator1 | value1  |
+	| Last Name   | equals    | Contact |
 
 Scenario Outline: 03 Delete Organisation Data
 	Given I am on the Mass Delete Accounts Page
-	When I filter based on <organisationName>
-	And I press Delete button
+	When I filter the account data <column1Row1>, <operator1>, <value1>
+	And I press Organisation Delete button
 	Then all the related Organisation records are deleted	
 Examples: 
-| organisationName|
-| Supplier |
-| Customer |
+	| column1Row1  | operator1   | value1   |
+	| Account Name | starts with | Supplier |
+	| Account Name | starts with | Customer |
 

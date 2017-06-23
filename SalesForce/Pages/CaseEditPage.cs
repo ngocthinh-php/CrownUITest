@@ -24,7 +24,7 @@
         //Enquiry Case Elements------------------------------
         private By _lblCaseRecordType = By.XPath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[2]/td[4]");
         private By _txtOrganisationName = By.XPath("//*[@id='cas4']");
-        private By _txtContactName = By.XPath("//*[@id='cas3']");
+        private By _txtContactName = By.XPath("//*[@id='cas3']");//By.XPath("//*[@id='cas3']")
         private By _listTeam = By.XPath("//*[@id='00Nb000000ASEUx']");
         private By _listStatus = By.XPath("//*[@id='cas7']");
         private By _listPriority = By.XPath("//*[@id='cas8']");
@@ -34,7 +34,12 @@
         private By _txtDescription = By.XPath("//*[@id='cas15']");
         //-----------------------------------------------------
 
+        private By _listTechnologyTeam = By.XPath("//*[@id='00Nb000000ASLvR']");
         private By _listWorkflow = By.XPath("//*[@id='00Nb000000ASLvS']");
+        private By _listCategory = By.XPath("//*[@id='00Nb000000ASLxF']");
+        private By _listSupportClassification = By.XPath("//*[@id='00Nb000000ASLvQ']");
+        private By _listSCLevel1 = By.XPath("//*[@id='00Nb000000ASLvO']");
+        private By _listSCLevel2 = By.XPath("//*[@id='00Nb000000ASLvP']");
 
         private By _btnSaveTop = By.XPath("//*[@id='topButtonRow']/input[1]");
         private By _btnSaveAndCloseTop = By.XPath("//*[@id='topButtonRow']/input[2]");
@@ -123,6 +128,41 @@
             get
             {
                 return driver.FindElement(_listWorkflow);
+            }
+        }
+        public IWebElement Category
+        {
+            get
+            {
+                return driver.FindElement(_listCategory);
+            }
+        }
+        public IWebElement SupportClassification
+        {
+            get
+            {
+                return driver.FindElement(_listSupportClassification);
+            }
+        }
+        public IWebElement SCLevel1
+        {
+            get
+            {
+                return driver.FindElement(_listSCLevel1);
+            }
+        }
+        public IWebElement SCLevel2
+        {
+            get
+            {
+                return driver.FindElement(_listSCLevel2);
+            }
+        }
+        public IWebElement TechnologyTeam
+        {
+            get
+            {
+                return driver.FindElement(_listTechnologyTeam);
             }
         }
 
@@ -303,6 +343,23 @@
                 throw new Exception("Team could not be selected");
             }
         }
+        public void SelectATechnologyTeam(string technologyTeam)
+        {
+            if (TechnologyTeam.Displayed)
+            {
+                TechnologyTeam.Click();
+                var x2 = technologyTeam;
+                var x1 = "//*[contains(text(),'";
+                var x3 = "')]";
+                Thread.Sleep(3000);
+                driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
+
+            }
+            else
+            {
+                throw new Exception("Team could not be selected");
+            }
+        }
         public void SelectCaseStatus(string status)
         {
             IWebElement dropDownListBox = driver.FindElement(_listStatus);
@@ -337,7 +394,7 @@
         {
             IWebElement dropDownListBox = driver.FindElement(_listCaseOrigin);
             SelectElement clickThis = new SelectElement(dropDownListBox);
-            //Thread.Sleep(2000);
+            Thread.Sleep(2000);
             clickThis.SelectByText(caseOrigin);
             //Thread.Sleep(2000);
         }
@@ -351,14 +408,46 @@
         }
         public void SelectWorkflow(string workFlow)
         {
-             IWebElement dropDownListBox = driver.FindElement(_listStatus);
+            IWebElement dropDownListBox = driver.FindElement(_listWorkflow);
             SelectElement clickThis = new SelectElement(dropDownListBox);
             //Thread.Sleep(2000);
-            clickThis.SelectByText(status);
+            clickThis.SelectByText(workFlow);
             //Thread.Sleep(2000);
-
-       
         }
+        public void SelectCategory(string category)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listCategory);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(category);
+            //Thread.Sleep(2000);
+        }
+        public void SelectSupportClassification(string supportClassification)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listSupportClassification);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(supportClassification);
+            //Thread.Sleep(2000);
+        }
+        public void SelectSCLevel1(string SCLevel1)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listSCLevel1);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(SCLevel1);
+            //Thread.Sleep(2000);
+        }
+        public void SelectSCLevel2(string SCLevel2)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listSCLevel2);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(SCLevel2);
+            //Thread.Sleep(2000);
+        }
+
+        /*
         public void CreateEnquiryCase(string orgName, string contactName, string team, string status, string priority, string triageLevel, string caseOrigin, string subject, string description)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
@@ -433,6 +522,104 @@
             {
                 throw new Exception("Case Origin could not be selected");
             }
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(_txtSubject));
+            Subject.Clear();
+            Subject.SendKeys(subject);
+            Thread.Sleep(2000);
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(_txtDescription));
+            Description.Clear();
+            Description.SendKeys(description);
+            Thread.Sleep(2000);
+
+        }
+        */
+        public void CreateTechSupportCase(string orgName, string contactName, string technologyTeam, string caseOrigin, string workflow, string category, string status, string priority, string supportClassification, string SCLevel1, string SCLevel2, string subject, string description)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(_txtOrganisationName));
+            OrganisationName.Clear();
+            OrganisationName.SendKeys(orgName);
+            Thread.Sleep(2000);
+
+            wait.Until(ExpectedConditions.ElementToBeClickable(_txtContactName));
+            ContactName.Clear();
+            ContactName.SendKeys(contactName);
+            Thread.Sleep(2000);
+
+            if (TechnologyTeam.Displayed)
+            {
+                TechnologyTeam.Click();
+                var x2 = technologyTeam;
+                var x1 = "//*[contains(text(),'";
+                var x3 = "')]";
+                Thread.Sleep(3000);
+                driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
+
+            }
+            else
+            {
+                throw new Exception("Team could not be selected");
+            }
+
+            IWebElement dropDownOriginListBox = driver.FindElement(_listCaseOrigin);
+            SelectElement clickOrigin = new SelectElement(dropDownOriginListBox);
+            //Thread.Sleep(2000);
+            clickOrigin.SelectByText(caseOrigin);
+            //Thread.Sleep(2000);
+
+            IWebElement dropDownWorkFlowListBox = driver.FindElement(_listWorkflow);
+            SelectElement clickWorkFlow = new SelectElement(dropDownWorkFlowListBox);
+            //Thread.Sleep(2000);
+            clickWorkFlow.SelectByText(workflow);
+            //Thread.Sleep(2000);
+
+            IWebElement dropDownCategoryListBox = driver.FindElement(_listCategory);
+            SelectElement clickCategory = new SelectElement(dropDownCategoryListBox);
+            //Thread.Sleep(2000);
+            clickCategory.SelectByText(category);
+            //Thread.Sleep(2000);
+
+            IWebElement dropDownStatusListBox = driver.FindElement(_listStatus);
+            SelectElement clickStatus = new SelectElement(dropDownStatusListBox);
+            Thread.Sleep(2000);
+            clickStatus.SelectByText(status);
+            Thread.Sleep(2000);
+
+            if (CasePriority.Displayed)
+            {
+                CasePriority.Click();
+                var x2 = priority;
+                var x1 = "//*[contains(text(),'";
+                var x3 = "')]";
+                Thread.Sleep(3000);
+                driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
+
+            }
+            else
+            {
+                throw new Exception("Case Priority could not be selected");
+            }
+
+            IWebElement dropDownSCListBox = driver.FindElement(_listSupportClassification);
+            SelectElement clickSC = new SelectElement(dropDownSCListBox);
+            //Thread.Sleep(2000);
+            clickSC.SelectByText(supportClassification);
+            //Thread.Sleep(2000);
+
+            IWebElement dropDownSCL1ListBox = driver.FindElement(_listSCLevel1);
+            SelectElement clickSCL1 = new SelectElement(dropDownSCL1ListBox);
+            //Thread.Sleep(2000);
+            clickSCL1.SelectByText(SCLevel1);
+            //Thread.Sleep(2000);
+
+            IWebElement dropDownSCL2ListBox = driver.FindElement(_listSCLevel2);
+            SelectElement clickSCL2 = new SelectElement(dropDownSCL2ListBox);
+            //Thread.Sleep(2000);
+            clickSCL2.SelectByText(SCLevel2);
+            //Thread.Sleep(2000);
 
             wait.Until(ExpectedConditions.ElementToBeClickable(_txtSubject));
             Subject.Clear();

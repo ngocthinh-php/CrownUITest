@@ -337,7 +337,7 @@
                 var x2 = caseDetl;
                 var x1 = "//*[contains(text(),'";
                 var x3 = "')]";
-                Thread.Sleep(3000);
+                Thread.Sleep(2000);
                 driver.FindElement(By.XPath(x1 + x2 + x3)).Click();
 
             }

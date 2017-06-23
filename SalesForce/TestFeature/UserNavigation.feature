@@ -17,7 +17,7 @@ Scenario: 02 User Navigates to Catter Page (through tab)
 	When I click on the Chatter tab
 	Then I should see the Chatter page
 
-Scenario: 28 User Navigates to Organisations Page (through tab)	
+Scenario: 03 User Navigates to Organisations Page (through tab)	
 	When I click on the Organisations tab
 	Then I should see the Organisations page
 
@@ -93,23 +93,27 @@ Scenario: 21 User Navigates to Triage Levels Page (through navigation link)
 	When I click on the Triage Levels link
 	Then I should see the Triage Levels page
 
-Scenario: 22 User navigates to Helpdesk Agent Profile page
+Scenario: 22 User Navigates to Categories Page (through navigation link)	
+	When I click on the Categories link
+	Then I should see the Categories page
+
+Scenario: 23 User navigates to Helpdesk Agent Profile page
 	When I click on the Helpdesk agent profile 
 	Then I should see Helpdesk Agent Profile page
 
-Scenario: 23 User navigates to CCS Business Intelligence Profile page
+Scenario: 24 User navigates to CCS Business Intelligence Profile page
 	When I click on the CCS Business Intelligence Profile 
 	Then I should see CCS Business Intelligence Profile page
 
-Scenario: 24 User navigates to CCS CRM User profile page
+Scenario: 25 User navigates to CCS CRM User profile page
 	When I click on the CCS CRM User profile 
 	Then I should see CCS CRM User profile page
 
-Scenario: 25 User navigates to CCS Framework Users profile page
+Scenario: 26 User navigates to CCS Framework Users profile page
 	When I click on the CCS Framework Users profile 
 	Then I should see CCS Framework Users profile page
 
-Scenario: 26 User navigates to CCS Procurement & Contract User profile page
+Scenario: 27 User navigates to CCS Procurement & Contract User profile page
 	When I click on the CCS Procurement & Contract User profile
 	Then I should see CCS Procurement & Contract User profile page
 

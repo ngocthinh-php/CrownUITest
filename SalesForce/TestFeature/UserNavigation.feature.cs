@@ -111,10 +111,10 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("28 User Navigates to Organisations Page (through tab)")]
-        public virtual void _28UserNavigatesToOrganisationsPageThroughTab()
+        [NUnit.Framework.DescriptionAttribute("03 User Navigates to Organisations Page (through tab)")]
+        public virtual void _03UserNavigatesToOrganisationsPageThroughTab()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("28 User Navigates to Organisations Page (through tab)", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 User Navigates to Organisations Page (through tab)", ((string[])(null)));
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 7
@@ -434,85 +434,102 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("22 User navigates to Helpdesk Agent Profile page")]
-        public virtual void _22UserNavigatesToHelpdeskAgentProfilePage()
+        [NUnit.Framework.DescriptionAttribute("22 User Navigates to Categories Page (through navigation link)")]
+        public virtual void _22UserNavigatesToCategoriesPageThroughNavigationLink()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("22 User navigates to Helpdesk Agent Profile page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("22 User Navigates to Categories Page (through navigation link)", ((string[])(null)));
 #line 96
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line 97
- testRunner.When("I click on the Helpdesk agent profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on the Categories link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 98
+ testRunner.Then("I should see the Categories page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("23 User navigates to Helpdesk Agent Profile page")]
+        public virtual void _23UserNavigatesToHelpdeskAgentProfilePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("23 User navigates to Helpdesk Agent Profile page", ((string[])(null)));
+#line 100
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 101
+ testRunner.When("I click on the Helpdesk agent profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 102
  testRunner.Then("I should see Helpdesk Agent Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("23 User navigates to CCS Business Intelligence Profile page")]
-        public virtual void _23UserNavigatesToCCSBusinessIntelligenceProfilePage()
+        [NUnit.Framework.DescriptionAttribute("24 User navigates to CCS Business Intelligence Profile page")]
+        public virtual void _24UserNavigatesToCCSBusinessIntelligenceProfilePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("23 User navigates to CCS Business Intelligence Profile page", ((string[])(null)));
-#line 100
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("24 User navigates to CCS Business Intelligence Profile page", ((string[])(null)));
+#line 104
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 101
+#line 105
  testRunner.When("I click on the CCS Business Intelligence Profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 106
  testRunner.Then("I should see CCS Business Intelligence Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("24 User navigates to CCS CRM User profile page")]
-        public virtual void _24UserNavigatesToCCSCRMUserProfilePage()
+        [NUnit.Framework.DescriptionAttribute("25 User navigates to CCS CRM User profile page")]
+        public virtual void _25UserNavigatesToCCSCRMUserProfilePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("24 User navigates to CCS CRM User profile page", ((string[])(null)));
-#line 104
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("25 User navigates to CCS CRM User profile page", ((string[])(null)));
+#line 108
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 105
+#line 109
  testRunner.When("I click on the CCS CRM User profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
+#line 110
  testRunner.Then("I should see CCS CRM User profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("25 User navigates to CCS Framework Users profile page")]
-        public virtual void _25UserNavigatesToCCSFrameworkUsersProfilePage()
+        [NUnit.Framework.DescriptionAttribute("26 User navigates to CCS Framework Users profile page")]
+        public virtual void _26UserNavigatesToCCSFrameworkUsersProfilePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("25 User navigates to CCS Framework Users profile page", ((string[])(null)));
-#line 108
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("26 User navigates to CCS Framework Users profile page", ((string[])(null)));
+#line 112
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 109
+#line 113
  testRunner.When("I click on the CCS Framework Users profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 110
+#line 114
  testRunner.Then("I should see CCS Framework Users profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("26 User navigates to CCS Procurement & Contract User profile page")]
-        public virtual void _26UserNavigatesToCCSProcurementContractUserProfilePage()
+        [NUnit.Framework.DescriptionAttribute("27 User navigates to CCS Procurement & Contract User profile page")]
+        public virtual void _27UserNavigatesToCCSProcurementContractUserProfilePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("26 User navigates to CCS Procurement & Contract User profile page", ((string[])(null)));
-#line 112
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("27 User navigates to CCS Procurement & Contract User profile page", ((string[])(null)));
+#line 116
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 113
+#line 117
  testRunner.When("I click on the CCS Procurement & Contract User profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 114
+#line 118
  testRunner.Then("I should see CCS Procurement & Contract User profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

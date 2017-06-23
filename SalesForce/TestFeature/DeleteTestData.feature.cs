@@ -77,9 +77,8 @@ namespace SalesForce.TestFeature
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("01 Delete Case Data")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("Contact", "Customer", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Contact", "Supplier", new string[0])]
-        public virtual void _01DeleteCaseData(string contactName, string accountName, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Last Name", "equals", "Contact", "First Name", "starts with", "Test", new string[0])]
+        public virtual void _01DeleteCaseData(string column1Row1, string operator1, string value1, string column1Row2, string operator2, string value2, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "RegressionTest"};
@@ -95,9 +94,9 @@ this.FeatureBackground();
 #line 11
  testRunner.Given("I am on the Mass Delete Cases Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
- testRunner.When(string.Format("I filter based on {0} and {1}", contactName, accountName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I filter the case data {0}, {1}, {2}, {3}, {4}, {5}", column1Row1, operator1, value1, column1Row2, operator2, value2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.And("I press Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I press Case Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
  testRunner.Then("all the related case records are deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -106,8 +105,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("02 Delete Contact Data")]
-        [NUnit.Framework.TestCaseAttribute("Contact", "Test", new string[0])]
-        public virtual void _02DeleteContactData(string lastName, string firstName, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Last Name", "equals", "Contact", new string[0])]
+        public virtual void _02DeleteContactData(string column1Row1, string operator1, string value1, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Delete Contact Data", exampleTags);
 #line 19
@@ -117,9 +116,9 @@ this.FeatureBackground();
 #line 20
  testRunner.Given("I am on the Mass Delete Contact Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
- testRunner.When(string.Format("I filter based on {0} and {1}", lastName, firstName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I filter the contact data {0}, {1}, {2}", column1Row1, operator1, value1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
- testRunner.And("I press Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I press Contact Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
  testRunner.Then("all the related contact records are deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -128,9 +127,9 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("03 Delete Organisation Data")]
-        [NUnit.Framework.TestCaseAttribute("Supplier", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Customer", new string[0])]
-        public virtual void _03DeleteOrganisationData(string organisationName, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Account Name", "starts with", "Supplier", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Account Name", "starts with", "Customer", new string[0])]
+        public virtual void _03DeleteOrganisationData(string column1Row1, string operator1, string value1, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Delete Organisation Data", exampleTags);
 #line 28
@@ -140,9 +139,9 @@ this.FeatureBackground();
 #line 29
  testRunner.Given("I am on the Mass Delete Accounts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
- testRunner.When(string.Format("I filter based on {0}", organisationName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I filter the account data {0}, {1}, {2}", column1Row1, operator1, value1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
- testRunner.And("I press Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I press Organisation Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
  testRunner.Then("all the related Organisation records are deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

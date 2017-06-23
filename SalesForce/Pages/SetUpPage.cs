@@ -1,4 +1,7 @@
-﻿namespace SalesForce.Pages
+﻿//=========================================================================================//
+//This page is used when a CCS Admin user logs in to Salesforce and navigates to Setup page//
+//=========================================================================================//
+namespace SalesForce.Pages
 {
     #region Using Directives
     using System;

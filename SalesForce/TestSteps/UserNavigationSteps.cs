@@ -315,6 +315,21 @@ namespace SalesForce.TestSteps
             ScenarioContext.Current.Pending();
         }
 
+        [When(@"I click on the Categories link")]
+        public void WhenIClickOnTheCategoriesLink()
+        {
+            TestBase.landing.ClickOnAllTabsIcon();
+            Thread.Sleep(3000);
+            TestBase.alltabs.ClickOnCategoriesLink();
+            Thread.Sleep(3000);
+        }
+
+        [Then(@"I should see the Categories page")]
+        public void ThenIShouldSeeTheCategoriesPage()
+        {
+            TestBase.category.VerifyPage();
+        }
+
 
     }
 }

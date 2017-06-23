@@ -1,21 +1,22 @@
-﻿Feature: 04 - Create a Contact
+﻿@Contacts
+Feature: 04 - Create a Contact
 	As a CCS staff I would 
 	I would like to create contact details
 	So that the contact details can be associated for various operations
 
 Background: User Navigates to Create Organisation Page
     Given I am on Contact Page
-	When I click on New button
-	Then I should be directed to Contact Edit Page
 @RegressionTest
 Scenario Outline: Create a contact with all fields populated
-	When I enter new contact details
-	And click on Save button
+	When I enter new contact details <firstName>, <lastName>, <jobTitle>, <department>, <contactType>, <mktgCampaignRef>, <status>, <telephone>, <extension>, <mobile>, <email>, <addnlemail>, <orgName>, <country>, <addressLine>, <townCity>, <county>, <postcode> and save the record
 	Then contact record should be created successfully
 Examples: 
-| salutation | firstName | lastName | jobTitle        | department | ccsEmailYN | contactType     | reportsTo | mktgCampaignRef | status | telephone   | extension | mobile      | email                         | addnlemail                    | usrResearchPartYN | orgName     | country | addressLine    | townCity | County | postcode | origin | notes  |
-| Mr.        | Test012   | Contact  | Help Desk Agent | CSC        | N          | General Contact |           | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test012Contact@mailinator.com | Test010Contact@mailinator.com | N                 | Customer005 | England | 9 Queen Street | Bristol  | Avon   | BS158BA  |        | A Test |
-| Mr.        | Test013   | Contact  | Help Desk Agent | CSC        | N          | General Contact |           | 0001            | Active | 01225895988 | 0101      | 07941373315 |                               | Test010Contact@mailinator.com | Y                 | Customer005 | England | 7 Queen Street | Bristol  | Avon   | BS158BA  |        | A Test |
-| Mr.        | Test014   | Contact  |                 |            | N          |                 |           |                 | Active | 01225895988 | 0105      |             |                               |                               | N                 | Customer005 |         |                |          |        |          |        |        |
+| firstName | lastName | jobTitle        | department | contactType     | mktgCampaignRef | status | telephone   | extension | mobile      | email                          | addnlemail                     | orgName     | country | addressLine    | townCity | county | postcode |
+| Test001   | Customer | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test001Customer@mailinator.com | Test001Customer@mailinator.com | Customer001 | England | 1 Queen Street | Bristol  | Avon   | BS158BA  |
+| Test002   | Customer | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test002Customer@mailinator.com | Test002Customer@mailinator.com | Customer002 | England | 2 Queen Street | Bristol  | Avon   | BS158BA  |
+| Test003   | Customer | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test003Customer@mailinator.com | Test003Customer@mailinator.com | Customer003 | England | 3 Queen Street | Bristol  | Avon   | BS158BA  |
+| Test001   | Supplier | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test001Supplier@mailinator.com | Test001Supplier@mailinator.com | Supplier001 | England | 1 Queen Street | Bristol  | Avon   | BS158BA  |
+| Test002   | Supplier | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test002Supplier@mailinator.com | Test002Supplier@mailinator.com | Supplier002 | England | 2 Queen Street | Bristol  | Avon   | BS158BA  |
+| Test003   | Supplier | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test003Supplier@mailinator.com | Test003Supplier@mailinator.com | Supplier003 | England | 3 Queen Street | Bristol  | Avon   | BS158BA  |
 
 
