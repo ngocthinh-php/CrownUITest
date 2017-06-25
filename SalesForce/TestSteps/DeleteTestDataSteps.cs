@@ -184,7 +184,35 @@ namespace SalesForce.TestSteps
             Thread.Sleep(2000);
             TestBase.orgMassDelete.ConfirmDataDeletion();
             Thread.Sleep(2000);
+        }
 
+        [Given(@"I am on Categories Page")]
+        public void GivenIAmOnCategoriesPage()
+        {
+            TestBase.landing.ClickOnAllTabsIcon();
+            Thread.Sleep(2000);
+            TestBase.landing.ClickOnCategoriesLink();
+            Thread.Sleep(2000);
+            TestBase.category.VerifyPage();
+            Thread.Sleep(2000);
+        }
+
+        [When(@"I try to delete category (.*) from (.*)")]
+        public void WhenITryToDeleteCategoryFrom(string catName, string allData)
+        {
+            //TestBase.category.SelectView(allData);
+            //TestBase.category.ClickOnGoButton();
+            TestBase.category.SelectRecentCategoryView(allData);
+            
+            TestBase.category.ReturnTableData();
+            TestBase.category.FindCategoriesDataFromTable(catName);
+        }
+
+        [Then(@"the record is deleted successfully")]
+        public void ThenTheRecordIsDeletedSuccessfully()
+        {
+            TestBase.catRecord.ClickOnTopDeleteButton();
+            TestBase.catRecord.ClickOnConfirmDelete();
         }
 
     }

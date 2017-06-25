@@ -147,6 +147,28 @@ this.FeatureBackground();
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("04 Delete Categories Data")]
+        [NUnit.Framework.TestCaseAttribute("Recently Created", "Test Communications", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Recently Created", "Test Marketing", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Recently Created", "Test Marketing Services", new string[0])]
+        public virtual void _04DeleteCategoriesData(string allData, string catName, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Delete Categories Data", exampleTags);
+#line 38
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 39
+ testRunner.Given("I am on Categories Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 40
+ testRunner.When(string.Format("I try to delete category {0} from {1}", catName, allData), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 41
+ testRunner.Then("the record is deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

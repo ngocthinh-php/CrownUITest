@@ -22,8 +22,10 @@
 
         #region Properties and fields
         private By _tableRecentCategories = By.XPath("//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table");
+        private By _tablePageView = By.CssSelector("div#ext-gen10.x-grid3-scroller");
         private By _btnNew = By.XPath("//*[@id='hotlist']/table/tbody/tr/td[2]/input");
-        private By _listPageView = By.XPath("//*[@id='fcf']");
+        //private By _listPageView = By.XPath("//*[@id='fcf']");
+        private By _listPageView = By.XPath("//span[text()='Test Marketing']");
         private By _btnGo = By.XPath("//*[@id='filter_element']/div/span/span[1]/input");
         private By _listRecentCategoryView = By.XPath("//*[@id='hotlist_mode']");
         private By _labelNoRecordFoundRecentView = By.CssSelector("th.noRowsHeader");
@@ -145,7 +147,7 @@
         {
             // xpath of html table
             var elemTable = driver.FindElement(_tableRecentCategories);
-
+            //var elemTable = driver.FindElement(_tablePageView);
             // Fetch all Row of the table
             List<IWebElement> lstTrElem = new List<IWebElement>(elemTable.FindElements(By.TagName("tr")));
             String strRowData = "";
@@ -170,10 +172,10 @@
                     Console.WriteLine("Data Retrieved");
                     //Console.WriteLine(lstTrElem[0].Text.Replace(" ", "\t\t"));
                 }
-                //Console.WriteLine(strRowData);
+                Console.WriteLine(strRowData);
                 strRowData = String.Empty;
             }
-            //Console.WriteLine("");
+            Console.WriteLine("");
 
             //Assert.IsTrue(CaseSubjectName.Displayed );
 
@@ -183,7 +185,8 @@
             if (categoryDetl != null)
             {
                 var x2 = categoryDetl;
-                var x1 = "//*[contains(text(),'";
+                var x1 = "//a[contains(text(),'";
+                //var x1 = "//span[contains(text(),'";
                 var x3 = "')]";
                 Thread.Sleep(2000);
                 driver.FindElement(By.XPath(x1 + x2 + x3)).Click();

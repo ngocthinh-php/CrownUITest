@@ -120,6 +120,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CloseACase.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestFeature\CreateACategory.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateACategory.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestFeature\CreateContact.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +192,7 @@
     </Compile>
     <Compile Include="TestSteps\ChatterPostSteps.cs" />
     <Compile Include="TestSteps\CreateACaseSteps.cs" />
+    <Compile Include="TestSteps\CreateACategorySteps.cs" />
     <Compile Include="TestSteps\CreateAContactSteps.cs" />
     <Compile Include="TestSteps\CreateOrganisationSteps.cs" />
     <Compile Include="TestSteps\DeleteTestDataSteps.cs" />
@@ -212,6 +218,10 @@
     <None Include="TestFeature\CloseACase.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CloseACase.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\CreateACategory.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateACategory.feature.cs</LastGenOutput>
     </None>
     <None Include="TestFeature\CreateContact.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

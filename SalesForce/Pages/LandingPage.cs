@@ -43,7 +43,7 @@ namespace SalesForce.Pages
         private By _lnkEditContactInfo = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[3]/a");
         private By _lnkDeveloperConsole = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[4]/a");
         private By _lnkHelpAndTraining = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[5]/a");
-        private By _lnkCategories = By.XPath("");
+        private By _lnkCategories = By.LinkText("Categories");
 
         //private By _lnkLogOut = By.XPath("//*[@id='globalHeaderBar']/div[2]/div/div/div/ul/li[6]/a");
         private By _lnkLogOut = By.LinkText("Logout");

@@ -35,3 +35,14 @@ Examples:
 	| Account Name | starts with | Supplier |
 	| Account Name | starts with | Customer |
 
+Scenario Outline: 04 Delete Categories Data
+	Given I am on Categories Page
+	When I try to delete category <catName> from <allData>
+	Then the record is deleted successfully	
+Examples: 
+	| allData          | catName                 |
+	| Recently Created | Test Communications     |
+	| Recently Created | Test Marketing          |
+	| Recently Created | Test Marketing Services |
+
+

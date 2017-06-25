@@ -151,7 +151,7 @@
              driver.SwitchTo().Alert().Accept();
          
         }
-        #endregion
+
         public Boolean isAlertPresent()
         {
             try
@@ -164,6 +164,6 @@
                 return false;
             }
         }
-
+        #endregion
     }
 }

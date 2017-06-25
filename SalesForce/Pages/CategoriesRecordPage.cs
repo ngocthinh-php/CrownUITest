@@ -192,6 +192,30 @@
             }
         }
 
+        public void ClickOnConfirmDelete()
+        {
+            if (isAlertPresent() == true)
+            { 
+                driver.SwitchTo().Alert().Accept();
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+
+        public Boolean isAlertPresent()
+        {
+            try
+            {
+                driver.SwitchTo().Alert();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
         #endregion
 
     }
