@@ -14,6 +14,6 @@ Scenario Outline: Create Triage Level Data
 	Then the new <triageLevel> record should be created successfully
 Examples: 
 	| triageLevel   | slaDays | isDefault |
-	| Test Level 01 | 0.25    | Yes       |
+	| Test Level 01 | 0.25    | No	       |
 	| Test Level 02 | 0.5     | No        |
 	| Test Level 03 | 1.0     | No        |

@@ -139,9 +139,28 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("03 Create a Procurement Case (CCS Admin User)")]
-        [NUnit.Framework.TestCaseAttribute("Tech Support", "Test001 Customer", "Customer001", "Technology Support", "Email", "Triage", "Problem", "Open", "Green", "SPAM", "AutoTest Tech Support001", "Tech Support Case with Email", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Tech Support", "Test002 Customer", "Customer002", "Applications & Infrastructure", "Phone", "Triage", "Request", "Open", "Green", "SalesForce", "AutoTest Tech Support002", "Tech Support Case with Email", new string[0])]
-        public virtual void _03CreateAProcurementCaseCCSAdminUser(string caseType, string contactName, string orgName, string technologyTeam, string caseOrigin, string workflow, string category, string status, string priority, string supportClassification, string subject, string description, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Procurement", "Customer001", "Test0001", "In Progress", "Below £100k", "Important", "Basic", "Buying Team", "Test Marketing", "Email", "Test Procurement 001", "Test Procurement 001", "No", "No", "Yes", "No", "No", "Green", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Procurement", "Customer002", "Test0002", "In Progress", "Below £100k", "Important", "Complex", "Buying Team", "Test Marketing", "Email", "Test Procurement 002", "Test Procurement 001", "No", "No", "Yes", "No", "No", "Green", new string[0])]
+        public virtual void _03CreateAProcurementCaseCCSAdminUser(
+                    string caseType, 
+                    string orgName, 
+                    string procReference, 
+                    string status, 
+                    string value, 
+                    string straImpToCustomer, 
+                    string sourComplexity, 
+                    string ccsTeam, 
+                    string cASCategory, 
+                    string caseOrigin, 
+                    string subject, 
+                    string description, 
+                    string coErgAppReqlist, 
+                    string dwpCARList, 
+                    string olncAppReqList, 
+                    string modrcaAppReqList, 
+                    string dwpmcatAppReqList, 
+                    string priority, 
+                    string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Create a Procurement Case (CCS Admin User)", exampleTags);
 #line 35
@@ -157,8 +176,9 @@ this.FeatureBackground();
 #line 39
  testRunner.Then("I should be presented with Case Edit screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
- testRunner.When(string.Format("I populate mandatory Tech Support Case information {0}, {1}, {2}, {3}, {4}, {5}, " +
-                        "{6}, {7}, {8}, {9}, {10} for the case and Save the record", contactName, orgName, technologyTeam, caseOrigin, workflow, category, status, priority, supportClassification, subject, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I populate mandatory Procurement Case information {0}, {1}, {2}, {3}, {4}, {5}, {" +
+                        "6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}, {16} for the case and Sav" +
+                        "e the record", orgName, procReference, status, value, straImpToCustomer, sourComplexity, ccsTeam, cASCategory, caseOrigin, subject, description, coErgAppReqlist, dwpCARList, olncAppReqList, modrcaAppReqList, dwpmcatAppReqList, priority), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
  testRunner.Then("a Case record be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

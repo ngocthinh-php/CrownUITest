@@ -77,7 +77,7 @@ namespace SalesForce.TestFeature
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Create Triage Level Data")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("Test Level 01", "0.25", "Yes", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Level 01", "0.25", "No", new string[0])]
         [NUnit.Framework.TestCaseAttribute("Test Level 02", "0.5", "No", new string[0])]
         [NUnit.Framework.TestCaseAttribute("Test Level 03", "1.0", "No", new string[0])]
         public virtual void CreateTriageLevelData(string triageLevel, string slaDays, string isDefault, string[] exampleTags)

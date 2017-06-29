@@ -109,6 +109,29 @@ namespace SalesForce.TestSteps
             //TestBase.caseEdit.CreateTechSupportCase(orgName, contactName, technologyTeam, caseOrigin, workflow, category, status, priority, supportClassification, SCLevel1, SCLevel2, subject, description);
         }
 
+        [When(@"I populate mandatory Procurement Case information (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*) for the case and Save the record")]
+        public void WhenIPopulateMandatoryProcurementCaseInformationCustomerTestInProgressBelowKImportantBasicBuyingTeamTestMarketingEmailTestProcurementTestProcurementNoNoYesNoNoGreenForTheCaseAndSaveTheRecord(string orgName, string procReference, string status, string value, string straImpToCustomer, string sourComplexity, string ccsTeam, string CASCategory, string caseOrigin, string subject, string description, string coErgAppReqlist, string dwpCARList, string olncAppReqList, string modrcaAppReqList, string dwpmcatAppReqList, string priority)
+        {
+            TestBase.caseEdit.EnterOrgNameTxt(orgName);
+            TestBase.caseEdit.EnterProcReferenceTxt(procReference);
+            TestBase.caseEdit.SelectProcStatusList(status);
+            TestBase.caseEdit.SelectProcValueList(value);
+            TestBase.caseEdit.SelectStraImpToCustomerList(straImpToCustomer);
+            TestBase.caseEdit.SelectSourComplexityList(sourComplexity);
+            TestBase.caseEdit.SelectCcsTeamList(ccsTeam);
+            TestBase.caseEdit.EnterProcCASCategoryTxt(CASCategory);
+            TestBase.caseEdit.SelectProcCaseOriginList(caseOrigin);
+            TestBase.caseEdit.EnterProcSubjectTxt(subject);
+            TestBase.caseEdit.EnterProcDescriptionTxt(description);
+            TestBase.caseEdit.SelectDwpCARList(dwpCARList);
+            TestBase.caseEdit.SelectOlncAppReqList(olncAppReqList);
+            TestBase.caseEdit.SelectModrcaAppReqList(modrcaAppReqList);
+            TestBase.caseEdit.SelectDwpmcatAppReqList(dwpmcatAppReqList);
+            TestBase.caseEdit.SelectProcPriorityList(priority);
+            TestBase.caseEdit.ClickOnTopSaveBtn();
+        }
+
+
         [Then(@"a Case record be created successfully")]
         public void ThenACaseRecordBeCreatedSuccessfully()
         {

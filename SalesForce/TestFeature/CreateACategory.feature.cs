@@ -78,10 +78,10 @@ namespace SalesForce.TestFeature
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("01 Create Category data")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("Test Communications", "", "CAS Master Category", "", "CPV", "15", "", "", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Test Marketing", "MA", "CAS Category", "Test Communications", "", "1512", "Test Communications", "", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Test Marketing Services", "", "CAS Sub Category", "Test Marketing", "", "1512373", "Test Marketing", "A Test to sort out", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Test Marketing Spl Services", "", "CAS Sub Category", "Test Marketing", "", "1512375", "Test Marketing", "A Test to sort out", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Communications", "", "CAS Master Category", "", "CPV", "1500001", "", "", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Marketing", "MA", "CAS Category", "Test Communications", "", "151200001", "Test Communications", "", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Marketing Services", "", "CAS Sub Category", "Test Marketing", "", "151237300001", "Test Marketing", "A Test to sort out", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Marketing Spl Services", "", "CAS Sub Category", "Test Marketing", "", "151237500001", "Test Marketing", "A Test to sort out", new string[0])]
         public virtual void _01CreateCategoryData(string catName, string catCode, string catType, string parent, string codeType, string catExtId, string parentName, string pgDescription, string[] exampleTags)
         {
             string[] @__tags = new string[] {

@@ -37,12 +37,14 @@ Scenario Outline: 03 Create a Procurement Case (CCS Admin User)
 	Then I should be navigated to Case type Selection page
 	When I select case Type as <caseType> and continue
 	Then I should be presented with Case Edit screen
-	When I populate mandatory Tech Support Case information <contactName>, <orgName>, <technologyTeam>, <caseOrigin>, <workflow>, <category>, <status>, <priority>, <supportClassification>, <subject>, <description> for the case and Save the record
+	When I populate mandatory Procurement Case information <orgName>, <procReference>, <status>, <value>, <straImpToCustomer>, <sourComplexity>, <ccsTeam>, <CASCategory>, <caseOrigin>, <subject>, <description>, <coErgAppReqlist>, <dwpCARList>, <olncAppReqList>, <modrcaAppReqList>, <dwpmcatAppReqList>, <priority> for the case and Save the record
 	Then a Case record be created successfully 
 Examples: 
-| caseType     | contactName      | orgName     | technologyTeam                | caseOrigin | workflow | category | status | priority | supportClassification | subject                  | description                  |
-| Tech Support | Test001 Customer | Customer001 | Technology Support            | Email      | Triage   | Problem  | Open   | Green    | SPAM                  | AutoTest Tech Support001 | Tech Support Case with Email |
-| Tech Support | Test002 Customer | Customer002 | Applications & Infrastructure | Phone      | Triage   | Request  | Open   | Green    | SalesForce            | AutoTest Tech Support002 | Tech Support Case with Email |
+| caseType    | orgName     | procReference | status      | value       | straImpToCustomer | sourComplexity | ccsTeam     | CASCategory    | caseOrigin | subject              | description          | coErgAppReqlist | dwpCARList | olncAppReqList | modrcaAppReqList | dwpmcatAppReqList | priority |
+| Procurement | Customer001 | Test0001      | In Progress | Below £100k | Important         | Basic          | Buying Team | Test Marketing | Email      | Test Procurement 001 | Test Procurement 001 | No              | No         | Yes            | No               | No                | Green    |
+| Procurement | Customer002 | Test0002      | In Progress | Below £100k | Important         | Complex        | Buying Team | Test Marketing | Email      | Test Procurement 002 | Test Procurement 001 | No              | No         | Yes            | No               | No                | Green    |
+
+
 
 
 

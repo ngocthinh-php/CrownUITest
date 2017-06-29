@@ -11,7 +11,7 @@ Scenario Outline: 1 Failed Login to the Salesforce
 	Then I should see Error MessagePlease enter your password.
 Examples: 
 | email                                    | password |
-| chitta.jena@crowncommercial.gov.uk.bauqa |          |
+| chitta.jena@crowncommercial.gov.uk |          |
 
 Scenario Outline: 2 Failed Login to the Salesforce
 	Given I have navigated to Salesforce login page
@@ -20,7 +20,7 @@ Scenario Outline: 2 Failed Login to the Salesforce
 	Then I should see Error MessagePlease check your username and password. If you still can't log in, contact your Salesforce administrator.
 Examples: 
 | email                                    | password |                                                                                              
-| chitta.jena@crowncommercial.gov.uk.bauqa | Data1111 | 
+| chitta.jena@crowncommercial.gov.uk | Data1111 | 
 
 Scenario Outline: 3 Successful User Login to the Salesforce
 	Given I have navigated to Salesforce login page
@@ -29,4 +29,4 @@ Scenario Outline: 3 Successful User Login to the Salesforce
 	Then I should be navigated to landingpage
 Examples: 
 | email                                    | password  | 
-| chitta.jena@crowncommercial.gov.uk.bauqa | Data@3456 | 
+| chitta.jena@crowncommercial.gov.uk | Data@3456 | 

@@ -14,9 +14,7 @@ Examples:
 | firstName | lastName | jobTitle        | department | contactType     | mktgCampaignRef | status | telephone   | extension | mobile      | email                          | addnlemail                     | orgName     | country | addressLine    | townCity | county | postcode |
 | Test001   | Customer | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test001Customer@mailinator.com | Test001Customer@mailinator.com | Customer001 | England | 1 Queen Street | Bristol  | Avon   | BS158BA  |
 | Test002   | Customer | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test002Customer@mailinator.com | Test002Customer@mailinator.com | Customer002 | England | 2 Queen Street | Bristol  | Avon   | BS158BA  |
-| Test003   | Customer | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test003Customer@mailinator.com | Test003Customer@mailinator.com | Customer002 | England | 3 Queen Street | Bristol  | Avon   | BS158BA  |
 | Test001   | Supplier | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test001Supplier@mailinator.com | Test001Supplier@mailinator.com | Supplier001 | England | 1 Queen Street | Bristol  | Avon   | BS158BA  |
 | Test002   | Supplier | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test002Supplier@mailinator.com | Test002Supplier@mailinator.com | Supplier001 | England | 2 Queen Street | Bristol  | Avon   | BS158BA  |
-| Test003   | Supplier | Help Desk Agent | CSC        | General Contact | 0001            | Active | 01225895988 | 0102      | 07941373315 | Test003Supplier@mailinator.com | Test003Supplier@mailinator.com | Supplier001 | England | 3 Queen Street | Bristol  | Avon   | BS158BA  |
 
 

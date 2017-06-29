@@ -67,7 +67,7 @@ namespace SalesForce.TestFeature
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1 Failed Login to the Salesforce")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.bauqa", "", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk", "", new string[0])]
         public virtual void _1FailedLoginToTheSalesforce(string email, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -93,7 +93,7 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("2 Failed Login to the Salesforce")]
-        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.bauqa", "Data1111", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk", "Data1111", new string[0])]
         public virtual void _2FailedLoginToTheSalesforce(string email, string password, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 Failed Login to the Salesforce", exampleTags);
@@ -114,7 +114,7 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("3 Successful User Login to the Salesforce")]
-        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk.bauqa", "Data@3456", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("chitta.jena@crowncommercial.gov.uk", "Data@3456", new string[0])]
         public virtual void _3SuccessfulUserLoginToTheSalesforce(string email, string password, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3 Successful User Login to the Salesforce", exampleTags);

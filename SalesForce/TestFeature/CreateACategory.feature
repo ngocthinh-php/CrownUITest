@@ -15,9 +15,9 @@ Scenario Outline: 01 Create Category data
 	Then a Category record is created successfully 
 Examples: 
 	| catName                     | catCode | catType             | parent              | codeType | catExtId | parentName          | pgDescription      |
-	| Test Communications         |         | CAS Master Category |                     | CPV      | 15       |                     |                    |
-	| Test Marketing              | MA      | CAS Category        | Test Communications |          | 1512     | Test Communications |                    |
-	| Test Marketing Services     |         | CAS Sub Category    | Test Marketing      |          | 1512373  | Test Marketing      | A Test to sort out |
-	| Test Marketing Spl Services |         | CAS Sub Category    | Test Marketing      |          | 1512375  | Test Marketing      | A Test to sort out |
+	| Test Communications         |         | CAS Master Category |                     | CPV      | 1500001       |                     |                    |
+	| Test Marketing              | MA      | CAS Category        | Test Communications |          | 151200001     | Test Communications |                    |
+	| Test Marketing Services     |         | CAS Sub Category    | Test Marketing      |          | 151237300001  | Test Marketing      | A Test to sort out |
+	| Test Marketing Spl Services |         | CAS Sub Category    | Test Marketing      |          | 151237500001  | Test Marketing      | A Test to sort out |
 	
 

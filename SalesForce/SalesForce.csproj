@@ -172,11 +172,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CreateACase.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\SurveyFeedbackObject.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SurveyFeedbackObject.feature</DependentUpon>
-    </Compile>
     <Compile Include="TestFeature\UserNavigation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,7 +188,6 @@
     <Compile Include="TestSteps\LogInSteps.cs" />
     <Compile Include="TestSteps\LogoutSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestSteps\SurveyFeedbackObjectSteps.cs" />
     <Compile Include="TestSteps\UserNavigationSteps.cs" />
     <Compile Include="Utilities\HandleTableData.cs" />
   </ItemGroup>
@@ -248,10 +242,6 @@
     <None Include="TestFeature\CreateACase.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CreateACase.feature.cs</LastGenOutput>
-    </None>
-    <None Include="TestFeature\SurveyFeedbackObject.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SurveyFeedbackObject.feature.cs</LastGenOutput>
     </None>
     <None Include="TestFeature\UserNavigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

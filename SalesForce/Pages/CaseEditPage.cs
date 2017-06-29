@@ -50,6 +50,147 @@
         private By _btnSaveAndCloseBottom = By.XPath("//*[@id='bottomButtonRow']/input[2]");
         private By _btnSaveAndNewBottom = By.XPath("//*[@id='bottomButtonRow']/input[3]");
         private By _btnCancelBottom = By.XPath("//*[@id='bottomButtonRow']/input[4]");
+
+        //Procurement Case Specific
+        private By _txtOrgName = By.XPath("//*[@id='cas4']");
+        private By _txtProcReference = By.XPath("//*[@id='00Nb000000ASEVb']");
+        private By _listProcStatus = By.XPath("//*[@id='cas7']");
+        private By _listValue = By.XPath("//*[@id='00Nb000000ASEWO']");
+        private By _listStraImpToCustomer = By.XPath("//*[@id='00Nb000000ASEW8']");
+        private By _listSourComplexity = By.XPath("//*[@id='00Nb000000ASEW3']");
+        private By _listCcsTeam = By.XPath("//*[@id='00Nb000000ASEZp']");
+        private By _txtProcCASCategory = By.XPath("//*[@id='CF00Nb000000ASEUK']");
+        private By _listProcCaseOrigin = By.XPath("//*[@id='cas11']");
+        private By _txtProcSubject = By.XPath("//*[@id='cas14']");
+        private By _txtProcDescription = By.XPath("//*[@id='cas15']");
+        private By _listCoErgAppReqlist = By.XPath("//*[@id='00Nb000000ASEUO']");
+        private By _listDwpCARList = By.XPath("//*[@id='00Nb000000ASEUm']");
+        private By _listolncAppReqList = By.XPath("//*[@id='00Nb000000ASEVT']");
+        private By _listmodrcaAppReqList = By.XPath("//*[@id='00Nb000000ASEVK']");
+        private By _listdwpmcatAppReqList = By.XPath("//*[@id='00Nb000000ASEUp']");
+        private By _listProcPriority = By.XPath("//*[@id='cas8']");
+        #endregion
+
+        #region Procurement objects
+        public IWebElement OrgNameTxt
+        {
+            get
+            {
+                return driver.FindElement(_txtOrgName);
+            }
+        }
+        public IWebElement ProcReferenceTxt
+        {
+            get
+            {
+                return driver.FindElement(_txtProcReference);
+            }
+        }
+        public IWebElement ProcStatusList
+        {
+            get
+            {
+                return driver.FindElement(_listProcStatus);
+            }
+        }
+        public IWebElement ProcValueList
+        {
+            get
+            {
+                return driver.FindElement(_listValue);
+            }
+        }
+        public IWebElement StraImpToCustomerList
+        {
+            get
+            {
+                return driver.FindElement(_listStraImpToCustomer);
+            }
+        }
+        public IWebElement SourComplexityList
+        {
+            get
+            {
+                return driver.FindElement(_listSourComplexity);
+            }
+        }
+        public IWebElement CcsTeamList
+        {
+            get
+            {
+                return driver.FindElement(_listCcsTeam);
+            }
+        }
+        public IWebElement ProcCASCategoryTxt
+        {
+            get
+            {
+                return driver.FindElement(_txtProcCASCategory);
+            }
+        }
+        public IWebElement ProcCaseOriginList
+        {
+            get
+            {
+                return driver.FindElement(_listProcCaseOrigin);
+            }
+        }
+        public IWebElement ProcSubjectTxt
+        {
+            get
+            {
+                return driver.FindElement(_txtProcSubject);
+            }
+        }
+        public IWebElement ProcDescriptionTxt
+        {
+            get
+            {
+                return driver.FindElement(_txtProcDescription);
+            }
+        }
+        public IWebElement CoErgAppReqlistList
+        {
+            get
+            {
+                return driver.FindElement(_listCoErgAppReqlist);
+            }
+        }
+        public IWebElement DwpCARList
+        {
+            get
+            {
+                return driver.FindElement(_listDwpCARList);
+            }
+        }
+        public IWebElement OlncAppReqList
+        {
+            get
+            {
+                return driver.FindElement(_listolncAppReqList);
+            }
+        }
+        public IWebElement ModrcaAppReqList
+        {
+            get
+            {
+                return driver.FindElement(_listmodrcaAppReqList);
+            }
+        }
+        public IWebElement DwpmcatAppReqList
+        {
+            get
+            {
+                return driver.FindElement(_listdwpmcatAppReqList);
+            }
+        }
+        public IWebElement ProcPriorityList
+        {
+            get
+            {
+                return driver.FindElement(_listProcPriority);
+            }
+        }
         #endregion
 
         #region define element attributes
@@ -165,7 +306,6 @@
                 return driver.FindElement(_listTechnologyTeam);
             }
         }
-
         public IWebElement TopSaveBtn
         {
             get
@@ -222,6 +362,8 @@
                 return driver.FindElement(_btnCancelBottom);
             }
         }
+
+        
         #endregion
 
         #region public method
@@ -444,6 +586,124 @@
             SelectElement clickThis = new SelectElement(dropDownListBox);
             //Thread.Sleep(2000);
             clickThis.SelectByText(SCLevel2);
+            //Thread.Sleep(2000);
+        }
+
+        //Procurement Case Specific
+        public void EnterOrgNameTxt(string orgName)
+        {
+            GetDisplayedElement(_txtOrgName, 500, 15000).SendKeys(orgName);
+        }
+        public void EnterProcReferenceTxt(string procReference)
+        {
+            GetDisplayedElement(_txtProcReference, 500, 15000).SendKeys(procReference);          
+        }        
+        public void SelectProcStatusList(string status)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listProcStatus);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(status);
+            //Thread.Sleep(2000);
+        }
+        public void SelectProcValueList(string value)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listValue);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(value);
+            //Thread.Sleep(2000);
+        }
+        public void SelectStraImpToCustomerList(string straImpToCustomer)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listStraImpToCustomer);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(straImpToCustomer);
+            //Thread.Sleep(2000);
+        }
+        public void SelectSourComplexityList(string sourComplexity)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listSourComplexity);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(sourComplexity);
+            //Thread.Sleep(2000);
+        }
+        public void SelectCcsTeamList(string ccsTeam)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listCcsTeam);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(ccsTeam);
+            //Thread.Sleep(2000);
+        }
+        public void EnterProcCASCategoryTxt(string CASCategory)
+        {
+            GetDisplayedElement(_txtProcCASCategory, 500, 15000).SendKeys(CASCategory);
+        }
+        public void SelectProcCaseOriginList(string caseOrigin)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listProcCaseOrigin);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(caseOrigin);
+            //Thread.Sleep(2000);
+        }
+        public void EnterProcSubjectTxt(string subject)
+        {
+            GetDisplayedElement(_txtProcSubject, 500, 15000).SendKeys(subject);
+        }
+        public void EnterProcDescriptionTxt(string description)
+        {
+            GetDisplayedElement(_txtProcDescription, 500, 15000).SendKeys(description);
+        }
+        public void SelectCoErgAppReqlistList(string coErgAppReqlist)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listCoErgAppReqlist);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(coErgAppReqlist);
+            //Thread.Sleep(2000);
+        }
+        public void SelectDwpCARList(string dwpCARList)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listDwpCARList);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(dwpCARList);
+            //Thread.Sleep(2000);
+        }
+        public void SelectOlncAppReqList(string olncAppReqList)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listolncAppReqList);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(olncAppReqList);
+            //Thread.Sleep(2000);
+        }
+        public void SelectModrcaAppReqList(string modrcaAppReqList)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listmodrcaAppReqList);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByText(modrcaAppReqList);
+            //Thread.Sleep(2000);
+        }
+        public void SelectDwpmcatAppReqList(string dwpmcatAppReqList)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listdwpmcatAppReqList);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByValue(dwpmcatAppReqList);
+            //Thread.Sleep(2000);
+        }
+        public void SelectProcPriorityList(string priority)
+        {
+            IWebElement dropDownListBox = driver.FindElement(_listProcPriority);
+            SelectElement clickThis = new SelectElement(dropDownListBox);
+            //Thread.Sleep(2000);
+            clickThis.SelectByValue(priority);
             //Thread.Sleep(2000);
         }
 
