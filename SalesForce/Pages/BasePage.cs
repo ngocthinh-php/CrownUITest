@@ -119,19 +119,6 @@ namespace SalesForce.Pages
                 throw new NoSuchElementException();
             }
         }
-        //public IWebElement GetDataFromTable(string findText)
-        //{
-        //    try
-        //    {
-
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw new NoSuchElementException();
-        //    }
-        //}
-
 
         ///// <summary>
         ///// Capture Screenshot & save

@@ -18,24 +18,23 @@ namespace SalesForce.TestFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("03 - Create_a_Category_")]
-    [NUnit.Framework.CategoryAttribute("Category")]
-    public partial class _03_Create_A_Category_Feature
+    [NUnit.Framework.DescriptionAttribute("04 - Create_A_Triage_Level_")]
+    [NUnit.Framework.CategoryAttribute("Triage")]
+    public partial class _04_Create_A_Triage_Level_Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "CreateACategory.feature"
+#line 1 "CreateATriageLevel.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "03 - Create_a_Category_", "\tIn order to manage enquiries and other requirements \r\n\tAs a Helpdesk Agent or an" +
-                    " employee in other parts of CCS entity\r\n\tI would like to be given a mechanism to" +
-                    " create cases", ProgrammingLanguage.CSharp, new string[] {
-                        "Category"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "04 - Create_A_Triage_Level_", "\tAs a CCS Salesforce system user\r\n\tI would like to create Triage Levels data\r\n\tSo" +
+                    " that I can use the data later for other related activities", ProgrammingLanguage.CSharp, new string[] {
+                        "Triage"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -71,18 +70,17 @@ namespace SalesForce.TestFeature
         {
 #line 7
 #line 8
- testRunner.Given("I am on Category page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on Triage Level Edit page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("01 Create Category data")]
+        [NUnit.Framework.DescriptionAttribute("Create Triage Level Data")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("Test Communications", "", "CAS Master Category", "", "CPV", "15", "", "", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Test Marketing", "MA", "CAS Category", "Test Communications", "", "1512", "Test Communications", "", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Test Marketing Services", "", "CAS Sub Category", "Test Marketing", "", "1512373", "Test Marketing", "A Test to sort out", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("Test Marketing Spl Services", "", "CAS Sub Category", "Test Marketing", "", "1512375", "Test Marketing", "A Test to sort out", new string[0])]
-        public virtual void _01CreateCategoryData(string catName, string catCode, string catType, string parent, string codeType, string catExtId, string parentName, string pgDescription, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Test Level 01", "0.25", "Yes", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Level 02", "0.5", "No", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Level 03", "1.0", "No", new string[0])]
+        public virtual void CreateTriageLevelData(string triageLevel, string slaDays, string isDefault, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "RegressionTest"};
@@ -90,19 +88,17 @@ namespace SalesForce.TestFeature
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Create Category data", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Triage Level Data", @__tags);
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line 12
- testRunner.When("I click on New Category button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I populate the field values {0}, {1} , {2}", triageLevel, slaDays, isDefault), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.Then("I should be navigated to Category Edit page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Save the rcord", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
- testRunner.When(string.Format("I enter category details {0}, {1}, {2}, {3}, {4}, {5}, {6} and Save the record", catName, catCode, catType, parent, catExtId, parentName, pgDescription), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
- testRunner.Then("a Category record is created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the new {0} record should be created successfully", triageLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -414,7 +414,7 @@
         }
         public void EnterDUNSNumber(string dunsNumber)
         {
-            GetDisplayedElement(_txtDUNSNumber, 500, 15000).SendKeys(dunsNumber);
+            GetDisplayedElement(_txtDUNSNumber, 500, 15000).SendKeys(dunsNumber.ToString());
         }
         public void EnterIndirectSME(string indirectSME)
         {

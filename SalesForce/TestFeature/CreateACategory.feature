@@ -1,5 +1,5 @@
-﻿@Cases
-Feature: 11 - Create a Category
+﻿@Category
+Feature: 03 - Create_a_Category_
 	In order to manage enquiries and other requirements 
 	As a Helpdesk Agent or an employee in other parts of CCS entity
 	I would like to be given a mechanism to create cases

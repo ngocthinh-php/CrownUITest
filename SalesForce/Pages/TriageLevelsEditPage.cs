@@ -102,24 +102,24 @@
         #region Public methods
         public void VerifyPage()
         {
-            Assert.AreEqual("Categories: Home ~ Salesforce - Enterprise Edition", driver.Title);
+            Assert.AreEqual("Triage Level Edit: New Triage Level ~ Salesforce - Enterprise Edition", driver.Title);
         }
         public void EnterTriageLevel(string triageLevel)
         {
             GetDisplayedElement(_txtTriageLevel, 500, 10000).Clear();
             GetDisplayedElement(_txtTriageLevel, 500, 10000).SendKeys(triageLevel);
         }
-        public void SelectSLADays(float slaDays)
+
+        public void SelectSLADays(string slaDays)
         {
             IWebElement dropDownListBox = SLADays;
             SelectElement clickThis = new SelectElement(dropDownListBox);
-            clickThis.SelectByValue(slaDays.ToString());
+            clickThis.SelectByText(slaDays);
         }
         public void ClickOnIsDefaultCheckBox()
         {
             if (IsDefaultCheckBox.Displayed)
             {
-                IsDefaultCheckBox.Clear();
                 IsDefaultCheckBox.Click();
             }
             else

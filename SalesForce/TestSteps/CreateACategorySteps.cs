@@ -1,16 +1,20 @@
-﻿using NUnit.Framework;
-using SalesForce.Hooks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
-
-namespace SalesForce.TestSteps
+﻿namespace SalesForce.TestSteps
 {
+    #region Using Directives
+    using NUnit.Framework;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using TechTalk.SpecFlow;
+    using TechTalk.SpecFlow.Assist;
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Support.UI;
+    using Hooks;
+    #endregion
+
     [Binding]
     public sealed class CreateACategorySteps
     {

@@ -32,20 +32,14 @@ namespace SalesForce.TestSteps
             Thread.Sleep(2000);
         }
 
-        [When(@"I filter the case data (.*), (.*), (.*), (.*), (.*), (.*)")]
-        public void WhenIFilterTheCaseData(string column1Row1, string operator1, string value1, string column1Row2, string operator2, string value2)
+        [When(@"I filter the case data (.*), (.*), (.*)")]
+        public void WhenIFilterTheCaseData(string column1Row1, string operator1, string value1)
         {
             TestBase.caseMassDelete.SelectCol1Row1(column1Row1);
             Thread.Sleep(2000);
             TestBase.caseMassDelete.SelectCol2Row1(operator1);
             Thread.Sleep(2000);
             TestBase.caseMassDelete.EnterCol3Row1Data(value1);
-            Thread.Sleep(2000);
-            TestBase.caseMassDelete.SelectCol1Row2(column1Row2);
-            Thread.Sleep(2000);
-            TestBase.caseMassDelete.SelectCol2Row2(operator2);
-            Thread.Sleep(2000);
-            TestBase.caseMassDelete.EnterCol3Row2Data(value2);
             Thread.Sleep(2000);
             TestBase.caseMassDelete.ClickOnSearchButton();
             Thread.Sleep(2000);
@@ -205,7 +199,9 @@ namespace SalesForce.TestSteps
             TestBase.category.SelectRecentCategoryView(allData);
             
             TestBase.category.ReturnTableData();
+            Thread.Sleep(2000);
             TestBase.category.FindCategoriesDataFromTable(catName);
+            Thread.Sleep(2000);
         }
 
         [Then(@"the record is deleted successfully")]
@@ -213,6 +209,32 @@ namespace SalesForce.TestSteps
         {
             TestBase.catRecord.ClickOnTopDeleteButton();
             TestBase.catRecord.ClickOnConfirmDelete();
+            Thread.Sleep(2000);
+        }
+
+        [Given(@"I am on Triage Level Page")]
+        public void GivenIAmOnTriageLevelPage()
+        {
+            TestBase.landing.ClickOnAllTabsIcon();
+            Thread.Sleep(2000);
+            TestBase.alltabs.ClickOnTriageLevelLink();
+            Thread.Sleep(2000);
+            TestBase.triage.VerifyPage();
+            Thread.Sleep(2000);
+        }
+
+        [When(@"I try to delete Test Level (.*) data")]
+        public void WhenITryToDeleteTestLevelData(string triageLevel)
+        {
+            TestBase.triage.FindTriageLevelDataFromTable(triageLevel);
+            TestBase.triageRecord.ClickOnTopDeleteButton();
+            TestBase.triageRecord.ClickOnConfirmDelete();
+        }
+
+        [Then(@"the triage level is deleted successfully")]
+        public void ThenTheTriageLevelIsDeletedSuccessfully()
+        {
+            TestBase.triage.VerifyPage();
         }
 
     }

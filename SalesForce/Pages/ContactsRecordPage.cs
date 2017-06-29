@@ -62,7 +62,7 @@ namespace SalesForce.Pages
         #region Public methods
         public void VerifyPage()
         {
-            Assert.AreEqual(ContactHeader.Text+" ~ Salesforce - Enterprise Edition", driver.Title);
+            Assert.AreEqual("Contact: "+ContactHeader.Text+" ~ Salesforce - Enterprise Edition", driver.Title);
         }
         public void GoToFeedTab()
         {

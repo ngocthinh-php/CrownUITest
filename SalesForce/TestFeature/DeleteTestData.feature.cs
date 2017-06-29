@@ -77,8 +77,8 @@ namespace SalesForce.TestFeature
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("01 Delete Case Data")]
         [NUnit.Framework.CategoryAttribute("RegressionTest")]
-        [NUnit.Framework.TestCaseAttribute("Last Name", "equals", "Contact", "First Name", "starts with", "Test", new string[0])]
-        public virtual void _01DeleteCaseData(string column1Row1, string operator1, string value1, string column1Row2, string operator2, string value2, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("First Name", "starts with", "Test", new string[0])]
+        public virtual void _01DeleteCaseData(string column1Row1, string operator1, string value1, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "RegressionTest"};
@@ -94,7 +94,7 @@ this.FeatureBackground();
 #line 11
  testRunner.Given("I am on the Mass Delete Cases Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
- testRunner.When(string.Format("I filter the case data {0}, {1}, {2}, {3}, {4}, {5}", column1Row1, operator1, value1, column1Row2, operator2, value2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I filter the case data {0}, {1}, {2}", column1Row1, operator1, value1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
  testRunner.And("I press Case Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
@@ -105,7 +105,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("02 Delete Contact Data")]
-        [NUnit.Framework.TestCaseAttribute("Last Name", "equals", "Contact", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Last Name", "equals", "Customer", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Last Name", "equals", "Supplier", new string[0])]
         public virtual void _02DeleteContactData(string column1Row1, string operator1, string value1, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Delete Contact Data", exampleTags);
@@ -132,17 +133,17 @@ this.FeatureBackground();
         public virtual void _03DeleteOrganisationData(string column1Row1, string operator1, string value1, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Delete Organisation Data", exampleTags);
-#line 28
+#line 29
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 29
- testRunner.Given("I am on the Mass Delete Accounts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
- testRunner.When(string.Format("I filter the account data {0}, {1}, {2}", column1Row1, operator1, value1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I am on the Mass Delete Accounts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 31
- testRunner.And("I press Organisation Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When(string.Format("I filter the account data {0}, {1}, {2}", column1Row1, operator1, value1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
+ testRunner.And("I press Organisation Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
  testRunner.Then("all the related Organisation records are deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -153,19 +154,42 @@ this.FeatureBackground();
         [NUnit.Framework.TestCaseAttribute("Recently Created", "Test Communications", new string[0])]
         [NUnit.Framework.TestCaseAttribute("Recently Created", "Test Marketing", new string[0])]
         [NUnit.Framework.TestCaseAttribute("Recently Created", "Test Marketing Services", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Recently Created", "Test Marketing Spl Services", new string[0])]
         public virtual void _04DeleteCategoriesData(string allData, string catName, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Delete Categories Data", exampleTags);
-#line 38
+#line 39
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 39
- testRunner.Given("I am on Categories Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 40
- testRunner.When(string.Format("I try to delete category {0} from {1}", catName, allData), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I am on Categories Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 41
+ testRunner.When(string.Format("I try to delete category {0} from {1}", catName, allData), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
  testRunner.Then("the record is deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("05 Delete Triage Level Data")]
+        [NUnit.Framework.TestCaseAttribute("Test Level 01", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Level 02", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("Test Level 03", new string[0])]
+        public virtual void _05DeleteTriageLevelData(string triageLevel, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Delete Triage Level Data", exampleTags);
+#line 50
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 51
+ testRunner.Given("I am on Triage Level Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 52
+ testRunner.When(string.Format("I try to delete {0} data", triageLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 53
+ testRunner.Then("the triage level is deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -23,8 +23,10 @@
         #region Properties and fields
         private By _listPageView = By.XPath("//*[@id='fcf']");
         private By _btnGo = By.XPath("//*[@id='filter_element']/div/span/span[1]/input");
-        private By _tableTriageLevelData = By.XPath("//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table");
-        private By _btnNew = By.XPath("//*[@id=hotlist']/table/tbody/tr/td[2]/input");
+        //private By _tableTriageLevelData = By.XPath("//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table");
+        private By _tableTriageLevelData = By.CssSelector("#table.list");
+        //private By _tableTriageLevelData = By.XPath("//*[@class='list']");
+        private By _btnNew = By.XPath("//*[@id='hotlist']/table/tbody/tr/td[2]/input");
         private By _lablelNoRecordInTable = By.XPath("//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table/tbody/tr/th");
 
         public IWebElement PageView
@@ -141,7 +143,7 @@
             //Assert.IsTrue(CaseSubjectName.Displayed );
 
         }
-        public void FindCategoriesDataFromTable(string triageLevel)
+        public void FindTriageLevelDataFromTable(string triageLevel)
         {
             if (triageLevel != null)
             {

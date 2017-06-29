@@ -18,9 +18,9 @@ namespace SalesForce.TestFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("02 - User Navigation")]
+    [NUnit.Framework.DescriptionAttribute("02 - User_Navigation_")]
     [NUnit.Framework.CategoryAttribute("Navigation")]
-    public partial class _02_UserNavigationFeature
+    public partial class _02_User_Navigation_Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -32,7 +32,7 @@ namespace SalesForce.TestFeature
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "02 - User Navigation", "\tIn order to access different parts of the application\r\n\tAs a CCS Employee\r\n\tI sh" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "02 - User_Navigation_", "\tIn order to access different parts of the application\r\n\tAs a CCS Employee\r\n\tI sh" +
                     "ould be given option to navigate", ProgrammingLanguage.CSharp, new string[] {
                         "Navigation"});
             testRunner.OnFeatureStart(featureInfo);

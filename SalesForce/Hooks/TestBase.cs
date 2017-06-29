@@ -15,11 +15,21 @@ namespace SalesForce.Hooks
     {
         public TestBase(IWebDriver driver): base(driver) {  }
         #region Properties
+
+        //--------------------------------------------------------------------------------------------------
+        //Select the environments to use by uncommenting...................................................
         //PEMQA
         //private static string BaseUrl = "https://pemqa-ccs-portal.cs83.force.com/s/login/";
         //BAUQA
         private static string BaseUrl = "https://crowncommercial--bauqa.cs86.my.salesforce.com/";
+        //PREPROD
+        //private static string BaseUrl = "https://crowncommercial--preprod.cs85.my.salesforce.com/";
+        //PROD
+        //private static string BaseUrl = "https://crowncommercial.my.salesforce.com/";
+        //--------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------
 
+        //Page Reference for different functionalities
         public static LoginPage login = new LoginPage(driver);
         public static LandingPage landing = new LandingPage(driver);
 
@@ -59,9 +69,14 @@ namespace SalesForce.Hooks
         public static CategoriesRecordPage catRecord = new CategoriesRecordPage(driver);
         //--------------------------------------------------------------------------------------------------
 
+        //Triage Levels----------------------------------------------------------------------------------------
+        public static TriageLevelsPage triage = new TriageLevelsPage(driver);
+        public static TriageLevelsEditPage triageEdit = new TriageLevelsEditPage(driver);
+        public static TriageLevelsRecordPage triageRecord = new TriageLevelsRecordPage(driver);
+        //--------------------------------------------------------------------------------------------------
+
         public static ProfileHomePage home = new ProfileHomePage(driver);
         public static ReportsPage reports = new ReportsPage(driver);
-        public static TriageLevelsPage triage = new TriageLevelsPage(driver);
         public static ChatterPage chatter = new ChatterPage(driver);
         public static AllTabsPage alltabs = new AllTabsPage(driver);
         public static SearchResultPage search = new SearchResultPage(driver);
@@ -77,7 +92,7 @@ namespace SalesForce.Hooks
         /// <summary>
         /// Admin user login before before starting any test
         /// </summary>
-        [BeforeFeature("Navigation", "Organisation", "Contacts", "Cases", "Chatter", "Delete")]
+        [BeforeFeature("Navigation", "Category", "Triage", "Organisation", "Contacts", "Cases", "Chatter", "Delete")]
         public static void UserLoginSetup()
         {
             TestBase.login.UserLogin("chitta.jena@crowncommercial.gov.uk.bauqa", "Data@3456");
@@ -100,6 +115,8 @@ namespace SalesForce.Hooks
         public static void TestTearDown()
         {
             driver.Close();
+            driver.Dispose();
+            
         }
 
         //protected override bool CurrentPage()
@@ -171,12 +188,6 @@ namespace SalesForce.Hooks
         }
         private string driverparams = "{\"Driver\":\"Firefox\"}";
 
-        ////Capture Screenshot
-        //public static void takeScreenshot(String filename)
-        //{
-        //    ITakesScreenshot screenshotHandler = driver as ITakesScreenshot;
-        //    Screenshot screenshot = screenshotHandler.GetScreenshot();
-        //    screenshot.SaveAsFile(filename + "png", ScreenshotImageFormat.Png);
-        //}
+
     }
 }

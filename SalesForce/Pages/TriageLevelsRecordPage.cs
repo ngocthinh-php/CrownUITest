@@ -21,6 +21,7 @@
         #endregion
 
         #region Properties and fields
+        private By _labelTriageLevelHeader = By.XPath("//*[@id='bodyCell']/div[1]/div[1]/div[1]/h2");
         private By _labelTriageLevel = By.XPath("//*[@id='Name_ileinner']");
         private By _labelSLADays = By.XPath("//*[@id='00Nb0000009IPdD_ileinner']");
         private By _chkBoxIsDefault = By.XPath("//*[@id='00Nb0000009IPdC_chkbox']");
@@ -34,6 +35,13 @@
         private By _btnSharingBottom = By.XPath("//*[@id='bottomButtonRow']/input[6]");
 
 
+        public IWebElement TriageLevelHeader
+        {
+            get
+            {
+                return driver.FindElement(_labelTriageLevelHeader);
+            }
+        }
         public IWebElement TriageLevel
         {
             get
@@ -117,7 +125,7 @@
         #region Public methods
         public void VerifyPage()
         {
-            Assert.AreEqual("Categories: Home ~ Salesforce - Enterprise Edition", driver.Title);
+            Assert.AreEqual("Triage Level: "+ TriageLevelHeader.Text+ " ~ Salesforce - Enterprise Edition", driver.Title);
         }
         public void ClickOnTopEditButton()
         {
@@ -205,6 +213,29 @@
             else
             {
                 Exception e;
+            }
+        }
+        public void ClickOnConfirmDelete()
+        {
+            if (isAlertPresent() == true)
+            {
+                driver.SwitchTo().Alert().Accept();
+            }
+            else
+            {
+                throw new Exception("Element is not found or not clickable");
+            }
+        }
+        public Boolean isAlertPresent()
+        {
+            try
+            {
+                driver.SwitchTo().Alert();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
             }
         }
         #endregion

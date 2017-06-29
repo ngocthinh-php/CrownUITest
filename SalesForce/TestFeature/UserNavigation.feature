@@ -1,5 +1,5 @@
 ﻿@Navigation
-Feature: 02 - User Navigation
+Feature: 02 - User_Navigation_
 	In order to access different parts of the application
 	As a CCS Employee
 	I should be given option to navigate

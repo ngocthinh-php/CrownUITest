@@ -1,4 +1,4 @@
-﻿Feature: 06 - Close A Case
+﻿Feature: 09 - Close_A_Case_
 	In order to avoid silly mistakes
 	As a math idiot
 	I want to be told the sum of two numbers

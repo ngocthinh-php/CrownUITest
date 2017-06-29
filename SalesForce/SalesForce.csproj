@@ -112,10 +112,10 @@
     <Compile Include="Pages\TriageLevelsRecordPage.cs" />
     <Compile Include="Pages\TriageLevelsEditPage.cs" />
     <Compile Include="Pages\TriageLevelsPage.cs" />
-    <Compile Include="TestFeature\ChatterPost.feature.cs">
+    <Compile Include="TestFeature\CreateAChatterPost.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ChatterPost.feature</DependentUpon>
+      <DependentUpon>CreateAChatterPost.feature</DependentUpon>
     </Compile>
     <Compile Include="TestFeature\CloseACase.feature.cs">
       <AutoGen>True</AutoGen>
@@ -127,25 +127,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CreateACategory.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\CreateContact.feature.cs">
+    <Compile Include="TestFeature\CreateAContact.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CreateContact.feature</DependentUpon>
+      <DependentUpon>CreateAContact.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\CreateOrganisation.feature.cs">
+    <Compile Include="TestFeature\CreateAnOrganisation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CreateOrganisation.feature</DependentUpon>
+      <DependentUpon>CreateAnOrganisation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestFeature\CreateATriageLevel.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateATriageLevel.feature</DependentUpon>
     </Compile>
     <Compile Include="TestFeature\DeleteTestData.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DeleteTestData.feature</DependentUpon>
-    </Compile>
-    <Compile Include="TestFeature\EmailTemplate.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmailTemplate.feature</DependentUpon>
     </Compile>
     <Compile Include="TestFeature\Frameworks.feature.cs">
       <AutoGen>True</AutoGen>
@@ -172,40 +172,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CreateACase.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestFeature\RecentCases.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RecentCases.feature</DependentUpon>
-    </Compile>
     <Compile Include="TestFeature\SurveyFeedbackObject.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SurveyFeedbackObject.feature</DependentUpon>
-    </Compile>
-    <Compile Include="TestFeature\TS.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TS.feature</DependentUpon>
     </Compile>
     <Compile Include="TestFeature\UserNavigation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserNavigation.feature</DependentUpon>
     </Compile>
-    <Compile Include="TestSteps\ChatterPostSteps.cs" />
+    <Compile Include="TestSteps\CreateAChatterPostSteps.cs" />
     <Compile Include="TestSteps\CreateACaseSteps.cs" />
     <Compile Include="TestSteps\CreateACategorySteps.cs" />
     <Compile Include="TestSteps\CreateAContactSteps.cs" />
-    <Compile Include="TestSteps\CreateOrganisationSteps.cs" />
+    <Compile Include="TestSteps\CreateAnOrganisationSteps.cs" />
+    <Compile Include="TestSteps\CreateATriageLevelSteps.cs" />
     <Compile Include="TestSteps\DeleteTestDataSteps.cs" />
-    <Compile Include="TestSteps\EmailTemplateSteps.cs" />
     <Compile Include="TestSteps\LoginAsDifferentUserSteps.cs" />
     <Compile Include="TestSteps\LogInSteps.cs" />
     <Compile Include="TestSteps\LogoutSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestSteps\RecentCasesSteps.cs" />
     <Compile Include="TestSteps\SurveyFeedbackObjectSteps.cs" />
-    <Compile Include="TestSteps\TSSteps.cs" />
     <Compile Include="TestSteps\UserNavigationSteps.cs" />
     <Compile Include="Utilities\HandleTableData.cs" />
   </ItemGroup>
@@ -213,9 +201,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="TestFeature\ChatterPost.feature">
+    <None Include="TestFeature\CreateAChatterPost.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>ChatterPost.feature.cs</LastGenOutput>
+      <LastGenOutput>CreateAChatterPost.feature.cs</LastGenOutput>
     </None>
     <None Include="TestFeature\CloseACase.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -225,21 +213,21 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CreateACategory.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\CreateContact.feature">
+    <None Include="TestFeature\CreateAContact.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CreateContact.feature.cs</LastGenOutput>
+      <LastGenOutput>CreateAContact.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\CreateOrganisation.feature">
+    <None Include="TestFeature\CreateAnOrganisation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CreateOrganisation.feature.cs</LastGenOutput>
+      <LastGenOutput>CreateAnOrganisation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeature\CreateATriageLevel.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateATriageLevel.feature.cs</LastGenOutput>
     </None>
     <None Include="TestFeature\DeleteTestData.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DeleteTestData.feature.cs</LastGenOutput>
-    </None>
-    <None Include="TestFeature\EmailTemplate.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>EmailTemplate.feature.cs</LastGenOutput>
     </None>
     <None Include="TestFeature\Frameworks.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -261,17 +249,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CreateACase.feature.cs</LastGenOutput>
     </None>
-    <None Include="TestFeature\RecentCases.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>RecentCases.feature.cs</LastGenOutput>
-    </None>
     <None Include="TestFeature\SurveyFeedbackObject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SurveyFeedbackObject.feature.cs</LastGenOutput>
-    </None>
-    <None Include="TestFeature\TS.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>TS.feature.cs</LastGenOutput>
     </None>
     <None Include="TestFeature\UserNavigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

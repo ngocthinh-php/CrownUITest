@@ -19,6 +19,7 @@ namespace SalesForce.Pages
         #endregion
 
         #region Properties and fields
+        private By _tableAllChatterPosts = By.XPath("//*[@id='feedwrapper']/div");
         //private By _lnkPost = By.XPath("//*[@id='publisherAttachTextPost']/span[1]");
         private By _lnkPost = By.XPath("//*[@id='publisherAttachTextPost']/span[1]");
         private By _lnkQuestion = By.XPath("//*[@id='publisherAttachQuestionPost']/span[1]");
@@ -53,6 +54,7 @@ namespace SalesForce.Pages
         string textp3 = "')]";
         //private By _lnkPostQuestionCreation = By.XPath("//*[@id='topicContainer0D57E00000E0EeR']/div/a");
         //private By _lnkPostQuestionCreation = By.ClassName("questionTitle");
+        private By _lablelNoQuestionRecordInTable = By.CssSelector("#div.emptyfeed");
         #endregion
 
         #region Element attributes
@@ -385,6 +387,13 @@ namespace SalesForce.Pages
         //        throw new Exception("Element is not found or not clickable");
         //    }
         //}
+        public IWebElement NoRecordInTableMessage
+        {
+            get
+            {
+                return driver.FindElement(_lablelNoQuestionRecordInTable);
+            }
+        }
         public void ClickOnConfirmDelete()
         {
 
@@ -403,6 +412,60 @@ namespace SalesForce.Pages
                 return false;
             }
         }
-#endregion
+        public void ReturnTableData()
+        {
+            // xpath of html table
+            var elemTable = driver.FindElement(_tableAllChatterPosts);
+            //var elemTable = driver.FindElement(_tablePageView);
+            // Fetch all Row of the table
+            List<IWebElement> lstTrElem = new List<IWebElement>(elemTable.FindElements(By.TagName("tr")));
+            String strRowData = "";
+
+            // Traverse each row
+            foreach (var elemTr in lstTrElem)
+            {
+                // Fetch the columns from a particuler row
+                List<IWebElement> lstTdElem = new List<IWebElement>(elemTr.FindElements(By.TagName("td")));
+                if (lstTdElem.Count > 0)
+                {
+                    // Traverse each column
+                    foreach (var elemTd in lstTdElem)
+                    {
+                        // "\t\t" is used for Tab Space between two Text
+                        strRowData = strRowData + elemTd.Text + "\t\t";
+                    }
+                }
+                else
+                {
+                    // To print the data into the console
+                    Console.WriteLine("Data Retrieved");
+                    //Console.WriteLine(lstTrElem[0].Text.Replace(" ", "\t\t"));
+                }
+                //Console.WriteLine(strRowData);
+                strRowData = String.Empty;
+            }
+            //Console.WriteLine("");
+
+            //Assert.IsTrue(CaseSubjectName.Displayed );
+
+        }
+        public void FindTriageLevelDataFromTable(string questionTitle)
+        {
+            if (questionTitle != null)
+            {
+                var x2 = questionTitle;
+                var x1 = "//a[contains(text(),'";
+                var x3 = "')]";
+                Thread.Sleep(2000);
+                Console.WriteLine(driver.FindElement(By.XPath(x1 + x2 + x3)).GetAttribute(questionTitle));
+
+            }
+            else
+            {
+                Assert.AreEqual("No recent records. Click Go or select a view from the dropdown to display records.", NoRecordInTableMessage.Text);
+            }
+        }
+
+        #endregion
     }
 }
